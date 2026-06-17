@@ -1,0 +1,17 @@
+{
+  "service": "hermes-researcher",
+  "runtime": "container",
+  "startCommand": "hermes dashboard --host 0.0.0.0 --port $PORT --skip-build",
+  "volumeMount": "/root/.hermes",
+  "environment": {
+    "HERMES_PROFILE": "researcher",
+    "HERMES_AGENT_ID": "researcher",
+    "NOUS_API_KEY": "${{ secrets.NOUS_API_KEY }}",
+    "OPENROUTER_API_KEY": "${{ secrets.OPENROUTER_API_KEY }}"
+  },
+  "notes": [
+    "Use one Railway service per durable Hermes profile.",
+    "Use persistent volumes for Hermes home.",
+    "Use a provider API rather than hosting GPU inference in this service."
+  ]
+}

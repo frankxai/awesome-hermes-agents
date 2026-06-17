@@ -1,0 +1,27 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Validate swarm JSON
+        shell: pwsh
+        run: |
+          Get-Content .\configs\starlight-hermes-swarm.example.json -Raw | ConvertFrom-Json | Out-Null
+
+      - name: Run safe swarm commands
+        shell: pwsh
+        run: |
+          .\scripts\hermes-swarm.ps1 list
+          .\scripts\hermes-swarm.ps1 emit-local
+          .\scripts\hermes-swarm.ps1 emit-railway
+          .\scripts\hermes-swarm.ps1 emit-vercel
+          .\scripts\hermes-swarm.ps1 emit-cloudflare

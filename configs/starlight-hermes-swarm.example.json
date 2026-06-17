@@ -1,0 +1,57 @@
+{
+  "schema": "awesome-hermes-agents.swarm.v1",
+  "name": "starlight-founder-swarm",
+  "owner": "frankxai",
+  "controlPlane": {
+    "system": "Starlight Intelligence System",
+    "operator": "Codex",
+    "kanban": "hermes kanban",
+    "provenance": "git + Starlight memory"
+  },
+  "defaults": {
+    "runtime": "hermes-agent",
+    "provider": "nous",
+    "fallbackProvider": "openrouter",
+    "local": {
+      "enabled": true
+    }
+  },
+  "agents": [
+    {
+      "id": "operator",
+      "profile": "operator",
+      "displayName": "Hermes Operator",
+      "purpose": "Coordinate work, maintain Kanban, assign tasks to specialist profiles.",
+      "deploy": ["local", "railway"],
+      "skills": ["planning", "kanban", "memory"],
+      "secrets": ["NOUS_API_KEY", "OPENROUTER_API_KEY"]
+    },
+    {
+      "id": "builder",
+      "profile": "builder",
+      "displayName": "Hermes Builder",
+      "purpose": "Inspect repos, implement changes, run tests, and prepare PR notes.",
+      "deploy": ["local"],
+      "skills": ["software-development", "github", "terminal"],
+      "secrets": ["NOUS_API_KEY", "GITHUB_TOKEN"]
+    },
+    {
+      "id": "researcher",
+      "profile": "researcher",
+      "displayName": "Hermes Researcher",
+      "purpose": "Gather primary sources, write research briefs, and maintain source indexes.",
+      "deploy": ["local", "railway"],
+      "skills": ["web-research", "summarization", "citations"],
+      "secrets": ["NOUS_API_KEY", "OPENROUTER_API_KEY"]
+    },
+    {
+      "id": "publisher",
+      "profile": "publisher",
+      "displayName": "Hermes Publisher",
+      "purpose": "Turn verified research and architecture into docs, guides, and launch assets.",
+      "deploy": ["local", "vercel-control-plane"],
+      "skills": ["docs", "website", "release-notes"],
+      "secrets": ["NOUS_API_KEY", "VERCEL_TOKEN"]
+    }
+  ]
+}

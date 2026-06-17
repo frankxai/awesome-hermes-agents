@@ -1,0 +1,51 @@
+# Example profile spec for Codex/Starlight generators.
+# This is not an official Hermes config schema.
+
+id: coder
+display_name: Hermes Code Guardian
+owner: frankxai
+runtime: hermes-agent
+profile_command: coder
+
+purpose: >
+  Review changes, inspect repositories, run tests, and write implementation notes.
+
+model:
+  provider: nous
+  fallback_provider: openrouter
+  preferred_model: anthropic/claude-sonnet-4.5
+
+toolsets:
+  - terminal
+  - file
+  - web
+  - memory
+  - skills
+
+skills:
+  - software-development/codebase-inspection
+  - software-development/github-code-review
+  - devops/watchers
+
+memory:
+  hermes_profile_home: "%LOCALAPPDATA%/hermes/profiles/coder"
+  starlight_vault_scope:
+    - technical
+    - operational
+
+governance:
+  can_write_files: true
+  can_push_git: false
+  needs_human_approval:
+    - production_deploy
+    - public_repo_create
+    - destructive_filesystem_change
+
+deployment:
+  local:
+    enabled: true
+  railway:
+    enabled: false
+  dashboard_registry:
+    expose: true
+

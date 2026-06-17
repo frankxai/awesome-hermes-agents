@@ -1,0 +1,16 @@
+{
+  "name": "hermes-control-plane",
+  "purpose": "Dashboard, registry UI, and API facade that queues work to long-running Hermes workers.",
+  "runsHermesDirectly": false,
+  "recommendedBackends": [
+    "Railway worker",
+    "Fly.io machine",
+    "VPS worker",
+    "LiteLLM Agent Platform bridge",
+    "managed agent endpoint"
+  ],
+  "environment": {
+    "HERMES_WORKER_ENDPOINT": "https://worker.example.com",
+    "HERMES_REGISTRY_PATH": "configs/starlight-hermes-swarm.example.json"
+  }
+}

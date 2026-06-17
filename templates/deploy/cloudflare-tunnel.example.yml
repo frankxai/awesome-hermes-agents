@@ -1,0 +1,12 @@
+tunnel: hermes-local
+credentials-file: /etc/cloudflared/hermes-local.json
+
+ingress:
+  - hostname: hermes-dashboard.example.com
+    service: http://127.0.0.1:9119
+  - hostname: hermes-webhooks.example.com
+    service: http://127.0.0.1:8080
+  - service: http_status:404
+
+# Put Cloudflare Access in front of dashboards and local control surfaces.
+# Use Workers for auth/routing/webhooks, not for long-lived shell execution.
