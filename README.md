@@ -17,6 +17,7 @@ Verified on 2026-06-17:
 ## Start Here
 
 - [Local Windows Setup](docs/local-windows-setup.md)
+- [Operator Decision Guide](docs/operator-decision-guide.md)
 - [Architecture Pattern](docs/architecture.md)
 - [Deployment Matrix](docs/deployment-matrix.md)
 - [Codex Control Plane](docs/codex-control-plane.md)
@@ -32,7 +33,7 @@ There are several related but distinct things:
 - Hermes models: Nous model family names such as Hermes 3.
 - Nous Portal / Tool Gateway: Nous-managed model and tool routing for Hermes Agent users.
 - Starlight Hermes pattern: FrankX/Starlight architecture that composes Hermes Agent profiles, skills, memory, MCP, and Codex-managed config generation.
-- Higgsfield Supercomputer: a managed creative pipeline product that publicly says it uses an enhanced Hermes 3 model; do not describe it as a hosted Hermes Agent fleet unless Higgsfield documents that explicitly.
+- Higgsfield Supercomputer: a managed creative pipeline product; do not describe it as a hosted Hermes Agent fleet unless Higgsfield documents that explicitly.
 
 ## Recommended Pattern
 
@@ -56,9 +57,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 d
 
 ## Repo Status
 
-This repo is intentionally documentation-first. Future additions should include:
+This repo is intentionally documentation-first, with just enough executable
+surface to validate and emit a Hermes swarm topology:
 
-- `scripts/hermes-swarm.ps1` for listing a swarm spec and emitting local/cloud commands.
-- `configs/starlight-hermes-swarm.example.json` as a machine-readable topology.
-- deploy templates for Railway, Vercel control planes, and Cloudflare Tunnel.
-- future Starlight profile registry compiler.
+- `scripts/hermes-swarm.ps1` lists, validates, and emits local setup commands.
+- `configs/starlight-hermes-swarm.example.json` is the machine-readable swarm example.
+- `templates/deploy/` includes Railway, Vercel control-plane, and Cloudflare Tunnel templates.
+- `templates/agents/` includes a profile spec shape for future registry compilers.

@@ -13,6 +13,7 @@ Checked on 2026-06-17.
 - Web dashboard: https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard
 - Profiles: https://hermes-agent.nousresearch.com/docs/user-guide/profiles
 - Kanban multi-agent board: https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban
+- Kanban tutorial: https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial
 - Tool Gateway: https://hermes-agent.nousresearch.com/docs/user-guide/features/tool-gateway
 - AI providers: https://hermes-agent.nousresearch.com/docs/integrations/providers
 - Configuration / terminal backends: https://hermes-agent.nousresearch.com/docs/user-guide/configuration
@@ -40,7 +41,6 @@ Checked on 2026-06-17.
 ## Adjacent Managed / Community Sources
 
 - Higgsfield Supercomputer intro: https://higgsfield.ai/supercomputer-intro
-- Higgsfield Supercomputer public launch post surfaced in search: Instagram reel mentioning enhanced Hermes 3 model.
 - NVIDIA Hermes Agent + NemoClaw post: https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw/
 - LiteLLM Agent Platform local repo: `C:\Users\frank\starlight\repos\litellm-agent-platform`
 - Local Hermes bridge template: `C:\Users\frank\starlight\repos\litellm-agent-platform\templates\hermes`

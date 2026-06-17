@@ -14,12 +14,12 @@ Use when:
 
 ## Higgsfield Supercomputer
 
-Higgsfield describes Supercomputer as a managed agentic creative pipeline that runs Higgsfield for content creation. Public material says it is powered by an enhanced Hermes 3 model tuned for agentic task execution.
+Higgsfield describes Supercomputer as a managed agentic creative pipeline that runs Higgsfield for content creation. Its public Supercomputer page is useful market evidence for managed creative-agent workflows, but it does not document a hosted Hermes Agent fleet.
 
 Treat as:
 
 - an adjacent managed creative-agent product;
-- evidence that Hermes model tech is being used in managed creative workflows.
+- evidence that founders and creators may prefer managed creative-agent workflows over owning every runtime detail.
 
 Do not claim:
 
@@ -50,4 +50,3 @@ Some community guides and products present one-click or managed Hermes deploymen
 ## NVIDIA NemoClaw Example
 
 NVIDIA has published an example using Hermes Agent with NemoClaw for self-evolving research workflows. Treat this as an enterprise/security-oriented reference architecture, especially for safer runtime boundaries.
-
