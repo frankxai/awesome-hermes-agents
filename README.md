@@ -25,6 +25,12 @@ Verified on 2026-06-17:
 - [Managed Offerings and Adjacent Platforms](docs/managed-offerings.md)
 - [Roadmap](docs/roadmap.md)
 
+## Companion Repositories
+
+- [agentic-architecture-field-guide](https://github.com/frankxai/agentic-architecture-field-guide) - vendor-neutral architecture guide for deciding when to use Hermes Agent, OpenClaw, DeepAgents, Claude Code, Codex, MCP, LiteLLM, and cloud deployment targets.
+- [awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems) - broader curated index of agent OS, coding agent, MCP, memory, orchestration, safety, deployment, and managed-agent projects.
+- [starlight-agent-army-architecture](https://github.com/frankxai/starlight-agent-army-architecture) - Starlight-specific implementation playbook for profile topology, SIS memory/provenance, Codex workflows, and swarm operations.
+
 ## What "Hermes" Means
 
 There are several related but distinct things:
@@ -34,6 +40,19 @@ There are several related but distinct things:
 - Nous Portal / Tool Gateway: Nous-managed model and tool routing for Hermes Agent users.
 - Starlight Hermes pattern: FrankX/Starlight architecture that composes Hermes Agent profiles, skills, memory, MCP, and Codex-managed config generation.
 - Higgsfield Supercomputer: a managed creative pipeline product; do not describe it as a hosted Hermes Agent fleet unless Higgsfield documents that explicitly.
+
+## Works With
+
+Hermes Agent works best as one layer in a broader agent operating system:
+
+- OpenClaw: chat and mobile gateway into selected local agents and channels.
+- DeepAgents / Deep Agents Code: durable harnesses for longer-running research and coding workflows.
+- Claude Code: repo maintainer lanes built around `CLAUDE.md`, skills, MCP, and subagents.
+- Codex: control-plane work for repo edits, tests, rules, hooks, skills, worktrees, and publish flows.
+- LiteLLM Agent Platform: model routing, provider policy, key management, budgets, and observability.
+- Starlight Intelligence System: memory, provenance, health checks, and swarm audit surface.
+
+Keep this repo Hermes-specific. Use the companion architecture guide and awesome list when the topic becomes general agent OS design.
 
 ## Recommended Pattern
 
