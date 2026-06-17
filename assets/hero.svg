@@ -1,0 +1,53 @@
+<svg width="1600" height="500" viewBox="0 0 1600 500" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Awesome Hermes Agents</title>
+  <desc id="desc">A GitHub README hero banner for Hermes Agent resources and operator patterns.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="500">
+      <stop stop-color="#071014"/>
+      <stop offset="0.45" stop-color="#0A1C23"/>
+      <stop offset="1" stop-color="#162616"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="260" y1="120" x2="1390" y2="390">
+      <stop stop-color="#66D9EF"/>
+      <stop offset="0.5" stop-color="#40C4AA"/>
+      <stop offset="1" stop-color="#D7FF8A"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="500" rx="28" fill="url(#bg)"/>
+  <g opacity="0.22">
+    <path d="M0 92H1600M0 188H1600M0 284H1600M0 380H1600" stroke="#B8F7E0"/>
+    <path d="M220 0V500M420 0V500M620 0V500M820 0V500M1020 0V500M1220 0V500M1420 0V500" stroke="#B8F7E0"/>
+  </g>
+  <g stroke="url(#accent)" stroke-width="3" opacity="0.78">
+    <path d="M864 164H1386V374H864V164Z"/>
+    <path d="M920 224H1032M920 274H1118M920 324H1068"/>
+    <path d="M1168 224H1290M1168 274H1350M1168 324H1270"/>
+    <path d="M750 250H864M1386 250H1490"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="750" cy="250" r="18" fill="#66D9EF"/>
+    <circle cx="864" cy="250" r="10" fill="#40C4AA"/>
+    <circle cx="1386" cy="250" r="10" fill="#D7FF8A"/>
+    <circle cx="1490" cy="250" r="18" fill="#40C4AA"/>
+  </g>
+  <g fill="#102A2F" stroke="#B8F7E0" stroke-width="1.6">
+    <rect x="888" y="194" width="210" height="52" rx="12"/>
+    <rect x="888" y="294" width="210" height="52" rx="12"/>
+    <rect x="1140" y="194" width="210" height="52" rx="12"/>
+    <rect x="1140" y="294" width="210" height="52" rx="12"/>
+  </g>
+  <text x="110" y="248" fill="#F4FFF9" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="66" font-weight="800" letter-spacing="0">Awesome Hermes</text>
+  <text x="112" y="314" fill="#B8F7E0" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="48" font-weight="700" letter-spacing="0">Agents</text>
+  <text x="114" y="370" fill="#D8E8E3" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="24" letter-spacing="0">Operator guides, profile patterns, deployment notes, and Starlight composition</text>
+  <text x="925" y="227" fill="#D9FFF4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">PROFILE</text>
+  <text x="925" y="327" fill="#D9FFF4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">KANBAN</text>
+  <text x="1178" y="227" fill="#D9FFF4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">COCKPIT</text>
+  <text x="1178" y="327" fill="#D9FFF4" font-family="Inter, Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">SWARM</text>
+</svg>

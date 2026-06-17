@@ -1,4 +1,20 @@
-# Awesome Hermes Agents
+<p align="center">
+  <img src="assets/hero.svg" alt="Awesome Hermes Agents" width="100%">
+</p>
+
+<h1 align="center">Awesome Hermes Agents</h1>
+
+<p align="center">
+  <strong>Hermes Agent operator guides, profile patterns, deployment notes, and Starlight composition resources.</strong>
+</p>
+
+<p align="center">
+  <a href="#start-here">Start Here</a> ·
+  <a href="docs/operator-decision-guide.md">Decision Guide</a> ·
+  <a href="docs/architecture.md">Architecture</a> ·
+  <a href="docs/deployment-matrix.md">Deploy</a> ·
+  <a href="docs/provenance-and-naming.md">Provenance</a>
+</p>
 
 Curated guides, architecture patterns, deployment notes, and templates for building with [Nous Research Hermes Agent](https://github.com/NousResearch/hermes-agent) and composing Hermes-style agent fleets.
 
