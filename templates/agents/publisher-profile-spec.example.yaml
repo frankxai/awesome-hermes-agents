@@ -42,6 +42,8 @@ integrations:
       Draft and publish approved X/Twitter updates from a dedicated publisher
       profile after operator review.
 
+# %LOCALAPPDATA% is Windows-specific; use a platform path such as
+# ~/.hermes/profiles/publisher on Linux or macOS.
 memory:
   hermes_profile_home: "%LOCALAPPDATA%/hermes/profiles/publisher"
   starlight_vault_scope:
