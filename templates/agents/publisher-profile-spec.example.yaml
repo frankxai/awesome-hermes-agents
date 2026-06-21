@@ -24,6 +24,8 @@ toolsets:
   - skills
 
 skills:
+  - documentation/docs
+  - documentation/website
   - documentation/release-notes
   - marketing/social-packaging
   - plugins/hermes-tweet
@@ -49,7 +51,7 @@ memory:
 governance:
   can_write_files: true
   can_push_git: false
-  can_publish_social: false
+  can_publish_social: true
   needs_human_approval:
     - production_deploy
     - public_social_post
