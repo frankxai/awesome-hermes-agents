@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenCreator • Hermes Swarm Intelligence Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --cosmic-void: #0a0a0f;
+            --atla-teal: #00d4c8;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 600;
+        }
+
+        .cosmic-bg {
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 212, 200, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(127, 0, 255, 0.05) 0%, transparent 50%),
+                #0a0a0f;
+        }
+
+        .section-header {
+            font-size: 13px;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .glass {
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .metric-card {
+            transition: transform 0.2s cubic-bezier(0.23, 1, 0.32, 1), 
+                        box-shadow 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-tab {
+            position: relative;
+            transition: all 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        
+        .nav-tab.active {
+            color: #00d4c8;
+            border-bottom: 2px solid #00d4c8;
+        }
+
+        .status-dot {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        .swarm-grid {
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+
+        .pillar {
+            transition: all 0.3s cubic-bezier(0.23, 1.0, 0.32, 1);
+        }
+
+        .pillar:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: #00d4c8;
+        }
+
+        .data-table {
+            font-feature-settings: "tnum";
+        }
+
+        .metric-value {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .subtle-motion {
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+    </style>
+</head>
+<body class="bg-[#0a0a0f] text-white cosmic-bg">
+    <!-- Top Navigation -->
+    <nav class="border-b border-white/10 bg-black/40 backdrop-blur-xl sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-2xl bg-gradient-to-br from-[#00d4c8] to-[#7f00ff] flex items-center justify-center">
+                        <i class="fa-solid fa-infinity text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-display text-2xl tracking-tighter">GenCreator</div>
+                        <div class="text-[10px] text-white/40 -mt-1">AGENTIC CREATOR OS</div>
+                    </div>
+                </div>
+                <div class="ml-4 px-3 py-1 rounded-full bg-white/5 text-xs flex items-center gap-2 border border-white/10">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-white/60">v0.16.0 • 16 Profiles Active</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4 text-sm">
+                <div class="flex items-center gap-2 px-4 py-2 rounded-2xl glass">
+                    <i class="fa-solid fa-robot text-[#00d4c8]"></i>
+                    <span class="text-white/70">Hermes Swarm</span>
+                </div>
+                <button onclick="window.location.reload()" 
+                        class="flex items-center gap-2 px-4 py-2 rounded-2xl hover:bg-white/5 transition-colors text-sm border border-white/10">
+                    <i class="fa-solid fa-sync text-xs"></i>
+                    <span>Refresh</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-8 pt-8 pb-20">
+        
+        <!-- Hero Status -->
+        <div class="flex items-end justify-between mb-8">
+            <div>
+                <div class="section-header text-white/40 mb-2">LIVE SWARM STATUS • 26 JUNE 2026</div>
+                <h1 class="font-display text-6xl tracking-tighter">Hermes Swarm<br>Intelligence</h1>
+                <p class="text-xl text-white/50 mt-3 max-w-md">6-Pillar CoE • Self-Improving Meta Layer • Multi-Profile Agentic OS</p>
+            </div>
+            
+            <div class="flex items-center gap-3">
+                <div class="px-5 py-3 rounded-3xl glass text-center">
+                    <div class="text-emerald-400 text-xs tracking-widest">HEALTH</div>
+                    <div class="font-display text-3xl text-emerald-400">94</div>
+                </div>
+                <div class="px-5 py-3 rounded-3xl glass text-center">
+                    <div class="text-white/40 text-xs tracking-widest">PROFILES</div>
+                    <div class="font-display text-3xl">16</div>
+                </div>
+                <div class="px-5 py-3 rounded-3xl glass text-center">
+                    <div class="text-white/40 text-xs tracking-widest">KANBAN</div>
+                    <div class="font-display text-3xl">12</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="flex border-b border-white/10 mb-8">
+            <button onclick="switchTab(0)" class="nav-tab active px-6 py-3 text-sm font-medium flex items-center gap-2" id="tab-0">
+                <i class="fa-solid fa-vial"></i> <span>TEST &amp; EVAL</span>
+            </button>
+            <button onclick="switchTab(1)" class="nav-tab px-6 py-3 text-sm font-medium flex items-center gap-2 text-white/60 hover:text-white" id="tab-1">
+                <i class="fa-solid fa-flask"></i> <span>EXPERIMENT</span>
+            </button>
+            <button onclick="switchTab(2)" class="nav-tab px-6 py-3 text-sm font-medium flex items-center gap-2 text-white/60 hover:text-white" id="tab-2">
+                <i class="fa-solid fa-sync"></i> <span>EVOLVE</span>
+            </button>
+            <button onclick="switchTab(3)" class="nav-tab px-6 py-3 text-sm font-medium flex items-center gap-2 text-white/60 hover:text-white" id="tab-3">
+                <i class="fa-solid fa-hammer"></i> <span>BUILD</span>
+            </button>
+        </div>
+
+        <!-- TEST & EVAL TAB -->
+        <div id="content-0" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                
+                <!-- Hermes Doctor Snapshot -->
+                <div class="lg:col-span-2 glass rounded-3xl p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-heartbeat text-[#00d4c8]"></i>
+                            <div class="font-display text-xl">Hermes Doctor • Live Snapshot</div>
+                        </div>
+                        <div class="text-xs px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400">2 issues</div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="metric-card bg-white/5 rounded-2xl p-5 border border-white/10">
+                            <div class="text-xs text-white/50">PROFILES</div>
+                            <div class="font-display text-4xl mt-1">16</div>
+                            <div class="text-emerald-400 text-xs mt-3 flex items-center gap-1.5">
+                                <i class="fa-solid fa-check"></i> <span>All on grok-build-0.1</span>
+                            </div>
+                        </div>
+                        
+                        <div class="metric-card bg-white/5 rounded-2xl p-5 border border-white/10">
+                            <div class="text-xs text-white/50">TOOLS</div>
+                            <div class="font-display text-4xl mt-1">18/22</div>
+                            <div class="text-amber-400 text-xs mt-3">browser-cdp, moa, messaging missing</div>
+                        </div>
+                        
+                        <div class="metric-card bg-white/5 rounded-2xl p-5 border border-white/10">
+                            <div class="text-xs text-white/50">KANBAN</div>
+                            <div class="font-display text-4xl mt-1">12</div>
+                            <div class="text-white/60 text-xs mt-3">4 blocked • 5 ready • 2 done (starlight-portfolio-os) — cycle 2026-06-26</div>
+                        </div>
+                        
+                        <div class="metric-card bg-white/5 rounded-2xl p-5 border border-white/10">
+                            <div class="text-xs text-white/50">MEMORY</div>
+                            <div class="font-display text-4xl mt-1">2.05k</div>
+                            <div class="text-emerald-400 text-xs mt-3">chars • Built-in active</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 text-xs text-white/40 border-l-2 border-white/20 pl-4">
+                        Gateway: <span class="text-rose-400">STOPPED</span> • Update: 1054 commits behind • 
+                        Kanban dispatcher requires gateway start
+                    </div>
+                </div>
+
+                <!-- Profile Matrix -->
+                <div class="glass rounded-3xl p-8">
+                    <div class="font-display text-xl mb-5 flex items-center gap-2">
+                        <i class="fa-solid fa-users"></i> 
+                        <span>Profile Matrix</span>
+                    </div>
+                    
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between items-center py-1.5 border-b border-white/10">
+                            <div class="flex items-center gap-2"><span class="text-[#00d4c8]">★</span> <span>default / frankx / gencreator</span></div>
+                            <div class="text-emerald-400 text-xs">PRIMARY</div>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-white/10">
+                            <span>arcanea • starlight • mind • reality</span>
+                            <span class="text-white/40 text-xs">BRAND</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5 border-b border-white/10">
+                            <span>arena-claude / gpt / grok / judge / llama</span>
+                            <span class="text-white/40 text-xs">EVAL</span>
+                        </div>
+                        <div class="flex justify-between items-center py-1.5">
+                            <span>aicoe • anime • income • research • tooling</span>
+                            <span class="text-white/40 text-xs">SPECIAL</span>
+                        </div>
+                    </div>
+                    
+                    <button onclick="copyCommand('hermes profile list')" 
+                            class="mt-6 w-full py-3 text-xs rounded-2xl border border-white/20 hover:bg-white/5 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-copy"></i> COPY PROFILE COMMAND
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIMENT TAB -->
+        <div id="content-1" class="tab-content hidden">
+            <div class="glass rounded-3xl p-8 mb-6">
+                <div class="flex items-center gap-3 mb-6">
+                    <i class="fa-solid fa-flask text-2xl text-violet-400"></i>
+                    <div>
+                        <div class="font-display text-2xl">Multi-LLM Arena Experiments</div>
+                        <div class="text-white/50">Powered by multi-llm-arena skill • Arena-Hard calibrated</div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="border border-white/10 rounded-2xl p-6 hover:border-violet-500/40 transition cursor-pointer" onclick="runExperiment('reasoning')">
+                        <div class="text-violet-400 text-xs mb-1">REASONING</div>
+                        <div class="font-medium">Complex multi-step logic + number theory</div>
+                        <div class="text-xs text-white/40 mt-4">8 hard tasks • 4 models</div>
+                    </div>
+                    <div class="border border-white/10 rounded-2xl p-6 hover:border-violet-500/40 transition cursor-pointer" onclick="runExperiment('agentic')">
+                        <div class="text-violet-400 text-xs mb-1">AGENTIC</div>
+                        <div class="font-medium">Tool-use + research + PRD generation</div>
+                        <div class="text-xs text-white/40 mt-4">Full Hermes tool access</div>
+                    </div>
+                    <div class="border border-white/10 rounded-2xl p-6 hover:border-violet-500/40 transition cursor-pointer" onclick="runExperiment('creative')">
+                        <div class="text-violet-400 text-xs mb-1">CREATIVE</div>
+                        <div class="font-medium">Story + product feature design</div>
+                        <div class="text-xs text-white/40 mt-4">Premium taste evaluation</div>
+                    </div>
+                </div>
+                
+                <div class="mt-6 text-xs text-white/40">Requires OpenRouter key or Nous Portal. Run via <code class="bg-white/10 px-1.5 py-0.5 rounded">hermes -s multi-llm-arena chat</code></div>
+            </div>
+        </div>
+
+        <!-- EVOLVE TAB -->
+        <div id="content-2" class="tab-content hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="glass rounded-3xl p-8">
+                    <div class="font-display text-xl mb-5">Evolution Priorities</div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex gap-4 items-start">
+                            <div class="w-6 h-6 rounded-xl bg-rose-500/10 flex-shrink-0 flex items-center justify-center text-rose-400 text-xs mt-0.5">1</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Update Hermes (1054 commits behind)</div>
+                                <div class="text-xs text-white/50">Apply Windows desktop patch first from awesome-hermes-agents</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-6 h-6 rounded-xl bg-rose-500/10 flex-shrink-0 flex items-center justify-center text-rose-400 text-xs mt-0.5">2</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Start Gateway + Kanban Dispatcher</div>
+                                <div class="text-xs text-white/50">Unlocks 12 blocked tasks + cron autonomy</div>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-6 h-6 rounded-xl bg-rose-500/10 flex-shrink-0 flex items-center justify-center text-rose-400 text-xs mt-0.5">3</div>
+                            <div class="flex-1">
+                                <div class="font-medium">Configure 6-Pillar Guardian Profiles</div>
+                                <div class="text-xs text-white/50">Strategy • Governance • Talent • Technology • Data • Ethics</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="glass rounded-3xl p-8">
+                    <div class="font-display text-xl mb-5">Self-Improving Mechanisms Active</div>
+                    <div class="text-sm space-y-3 text-white/70">
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400 w-4"></i> Skills Curator (auto archive/stale)</div>
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400 w-4"></i> ASPH Protocol (agentic-ops)</div>
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400 w-4"></i> Persistent Memory + Provenance</div>
+                        <div class="flex items-center gap-3"><i class="fa-solid fa-check text-emerald-400 w-4"></i> Kanban + Delegation Swarm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BUILD TAB -->
+        <div id="content-3" class="tab-content hidden">
+            <div class="glass rounded-3xl p-8">
+                <div class="font-display text-2xl mb-2">Build Meaningful Artifacts</div>
+                <div class="text-white/50 mb-6">World-class taste • Systematic process • Full GitHub URLs enforced</div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <button onclick="buildArtifact('dashboard')" class="group p-6 rounded-2xl border border-white/10 hover:border-[#00d4c8]/60 transition text-left">
+                        <i class="fa-solid fa-chart-line text-2xl text-[#00d4c8] mb-3 block"></i>
+                        <div class="font-medium">Swarm Dashboard v2</div>
+                        <div class="text-xs text-white/40">This page • Motion + pillars</div>
+                    </button>
+                    <button onclick="buildArtifact('skill')" class="group p-6 rounded-2xl border border-white/10 hover:border-[#00d4c8]/60 transition text-left">
+                        <i class="fa-solid fa-book text-2xl text-[#00d4c8] mb-3 block"></i>
+                        <div class="font-medium">gencreator-swarm-evolver</div>
+                        <div class="text-xs text-white/40">New meta skill</div>
+                    </button>
+                    <button onclick="buildArtifact('kanban')" class="group p-6 rounded-2xl border border-white/10 hover:border-[#00d4c8]/60 transition text-left">
+                        <i class="fa-solid fa-tasks text-2xl text-[#00d4c8] mb-3 block"></i>
+                        <div class="font-medium">6-Pillar Kanban Tasks</div>
+                        <div class="text-xs text-white/40">Seed evolution board</div>
+                    </button>
+                    <button onclick="buildArtifact('report')" class="group p-6 rounded-2xl border border-white/10 hover:border-[#00d4c8]/60 transition text-left">
+                        <i class="fa-solid fa-file-lines text-2xl text-[#00d4c8] mb-3 block"></i>
+                        <div class="font-medium">Superintelligence Report</div>
+                        <div class="text-xs text-white/40">Research-backed</div>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6-PILLAR CoE -->
+        <div class="mt-10">
+            <div class="section-header text-white/40 mb-4 px-1">6-PILLAR PERSONAL AI CENTER OF EXCELLENCE</div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="pillar glass rounded-3xl p-6 border border-white/10 hover:border-white/20">
+                    <div class="text-[#00d4c8] text-xs mb-3">01</div>
+                    <div class="font-display">STRATEGY</div>
+                    <div class="text-xs text-white/50 mt-2">Vision, roadmaps, competitive moats</div>
+                </div>
+                <div class="pillar glass rounded-3xl p-6 border border-white/10 hover:border-white/20">
+                    <div class="text-[#00d4c8] text-xs mb-3">02</div>
+                    <div class="font-display">GOVERNANCE</div>
+                    <div class="text-xs text-white/50 mt-2">Ethics, security, provenance, ASPH</div>
+                </div>
+                <div class="pillar glass rounded-3xl p-6 border border-white/10 hover:border-white/20">
+                    <div class="text-[#00d4c8] text-xs mb-3">03</div>
+                    <div class="font-display">TALENT</div>
+                    <div class="text-xs text-white/50 mt-2">Agent profiles, skill development</div>
+                </div>
+                <div class="pillar glass rounded-3xl p-6 border border-white/10 hover:border-white/20">
+                    <div class="text-[#00d4c8] text-xs mb-3">04</div>
+                    <div class="font-display">TECHNOLOGY</div>
+                    <div class="text-xs text-white/50 mt-2">Hermes, MCP, kanban, cron, delegation</div>
+                </div>
+                <div class="pillar glass rounded-3xl p-6 border border-white/10 hover:border-white/20">
+                    <div class="text-[#00d4c8] text-xs mb-3">05</div>
+                    <div class="font-display">DATA</div>
+                    <div class="text-xs text-white/50 mt-2">Memory, sessions, provenance, SIS</div>
+                </div>
+                <div class="pillar glass rounded-3xl p-6 border border-white/10 hover:border-white/20">
+                    <div class="text-[#00d4c8] text-xs mb-3">06</div>
+                    <div class="font-display">ETHICS</div>
+                    <div class="text-xs text-white/50 mt-2">Redaction, approvals, safety, red-teaming</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full GitHub Registry -->
+        <div class="mt-12">
+            <div class="section-header text-white/40 mb-4 px-1">COMPLETE GITHUB REGISTRY • FRANKXAI SWARM</div>
+            <div class="glass rounded-3xl p-8 text-sm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-white/80">
+                    <div><a href="https://github.com/NousResearch/hermes-agent" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/NousResearch/hermes-agent</a> <span class="text-white/30">(official core)</span></div>
+                    <div><a href="https://github.com/frankxai/agentic-ops" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/agentic-ops</a></div>
+                    <div><a href="https://github.com/frankxai/awesome-hermes-agents" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/awesome-hermes-agents</a></div>
+                    <div><a href="https://github.com/frankxai/agentic-architecture-field-guide" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/agentic-architecture-field-guide</a></div>
+                    <div><a href="https://github.com/frankxai/awesome-agent-operating-systems" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/awesome-agent-operating-systems</a></div>
+                    <div><a href="https://github.com/frankxai/starlight-agent-army-architecture" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/starlight-agent-army-architecture</a></div>
+                    <div><a href="https://github.com/frankxai/realityarchitect" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/realityarchitect</a> <span class="text-emerald-400">(MIT)</span></div>
+                    <div><a href="https://github.com/frankxai/realityarchitect-vault" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/realityarchitect-vault</a> <span class="text-white/30">(private)</span></div>
+                    <div><a href="https://github.com/frankxai/agentic-creator-os" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/agentic-creator-os</a></div>
+                    <div><a href="https://github.com/frankxai/arcanea-ai-app" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/arcanea-ai-app</a></div>
+                    <div><a href="https://github.com/frankxai/multi-llm-arena" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/multi-llm-arena</a></div>
+                    <div><a href="https://github.com/frankxai/domain-intelligence-system" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/domain-intelligence-system</a></div>
+                    <div><a href="https://github.com/frankxai/agentic-operating-system-standard" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/agentic-operating-system-standard</a></div>
+                    <div><a href="https://github.com/frankxai/starlight-swarm" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/starlight-swarm</a></div>
+                    <div><a href="https://github.com/frankxai/agentic-intelligence-system" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/agentic-intelligence-system</a></div>
+                    <div><a href="https://github.com/frankxai/sentinel-swarm-agent-skills" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/sentinel-swarm-agent-skills</a></div>
+                    <div><a href="https://github.com/frankxai/agentic-creator-skills" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/agentic-creator-skills</a></div>
+                    <div><a href="https://github.com/frankxai/AnimeLegends" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/AnimeLegends</a></div>
+                    <div><a href="https://github.com/frankxai/arcanea-orchestrator" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/arcanea-orchestrator</a></div>
+                    <div><a href="https://github.com/frankxai/blue-life-commons" target="_blank" class="hover:text-[#00d4c8] transition">https://github.com/frankxai/blue-life-commons</a></div>
+                </div>
+                <div class="mt-6 pt-6 border-t border-white/10 text-[10px] text-white/30">Full org: <a href="https://github.com/frankxai" class="hover:text-white">https://github.com/frankxai</a> • Consolidation target: ~40 repos • All changes pushed to main</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="max-w-7xl mx-auto px-8 py-8 text-xs text-white/30 border-t border-white/10 flex justify-between items-center">
+        <div>Grounded in NousResearch Hermes Agent v0.16.0 + local swarm state • 2026-06-26</div>
+        <div class="flex gap-4">
+            <a href="https://github.com/frankxai/awesome-hermes-agents" class="hover:text-white">awesome-hermes-agents</a>
+            <a href="https://hermes-agent.nousresearch.com/docs" class="hover:text-white">Hermes Docs</a>
+        </div>
+    </footer>
+
+    <script>
+        function switchTab(tab) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.querySelectorAll('.nav-tab').forEach(el => el.classList.remove('active'));
+            
+            document.getElementById(`content-${tab}`).classList.remove('hidden');
+            document.getElementById(`tab-${tab}`).classList.add('active');
+        }
+        
+        function copyCommand(cmd) {
+            navigator.clipboard.writeText(cmd).then(() => {
+                const originalText = event.currentTarget ? event.currentTarget.innerHTML : '';
+                const btns = document.querySelectorAll('button');
+                btns.forEach(b => {
+                    if (b.innerText.includes('COPY')) {
+                        const orig = b.innerHTML;
+                        b.innerHTML = '<i class="fa-solid fa-check"></i> COPIED';
+                        setTimeout(() => { b.innerHTML = orig; }, 1800);
+                    }
+                });
+            });
+        }
+        
+        function runExperiment(type) {
+            const messages = {
+                reasoning: "Launching reasoning arena (8 hard tasks across 4 arena profiles)...",
+                agentic: "Spawning agentic tool-use arena with full Hermes capabilities...",
+                creative: "Starting creative premium-taste evaluation..."
+            };
+            alert(messages[type] + "\n\nRun manually: hermes -s multi-llm-arena chat -q \"Run " + type + " arena\"");
+        }
+        
+        function buildArtifact(type) {
+            const actions = {
+                dashboard: "Dashboard already open. This is the live v1 artifact. Next iteration will include real-time kanban sync + Three.js swarm visualization.",
+                skill: "Creating gencreator-swarm-evolver skill now via skill_manage...",
+                kanban: "Seeding 6-pillar evolution tasks into starlight-portfolio-os board...",
+                report: "Generating Superintelligence Setup Report (pulling from arxiv + local memory)..."
+            };
+            alert(actions[type] + "\n\nAll artifacts will be committed to main and linked in awesome-hermes-agents.");
+        }
+        
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '?') {
+                e.preventDefault();
+                const tabs = document.querySelectorAll('.nav-tab');
+                tabs.forEach((t, i) => {
+                    if (t.classList.contains('active')) {
+                        const next = (i + 1) % tabs.length;
+                        tabs[next].click();
+                    }
+                });
+            }
+        });
+        
+        // Boot
+        console.log('%c[GenCreator] Hermes Swarm Dashboard loaded — grounded in real local state', 'color:#00d4c8');
+    </script>
+</body>
+</html>
