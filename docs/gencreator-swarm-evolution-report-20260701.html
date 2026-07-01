@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenCreator Swarm Evolution Report • 2026-07-01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500&amp;display=swap');
+    :root {
+      --bg: #08090a;
+      --card: #111214;
+      --accent: #5e6ad2;
+      --text: #f1f1f3;
+      --muted: #a1a1aa;
+    }
+    body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    .geist { font-family: 'Geist', system-ui, sans-serif; letter-spacing: -0.025em; }
+    .glass { background: rgba(17,18,20,0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.06); }
+    .metric { transition: transform 0.2s cubic-bezier(0.23,1,0.32,1); }
+    .metric:hover { transform: translateY(-2px); }
+    .pillar { transition: all 0.2s cubic-bezier(0.23,1,0.32,1); }
+    .pillar:hover { transform: translateY(-1px); box-shadow: 0 0 0 1px rgba(94,106,210,0.2); }
+    .kanban-row { transition: background 0.1s; }
+    .kanban-row:hover { background: rgba(255,255,255,0.02); }
+    .section-header { font-family: 'Geist', system-ui, sans-serif; letter-spacing: -0.05em; }
+    .cosmic-bg { background: radial-gradient(circle at 50% 20%, rgba(94,106,210,0.06) 0%, transparent 50%); }
+    .shadow-border { box-shadow: 0 0 0 1px rgba(0,0,0,0.08); }
+    .lattice { background-image: linear-gradient(rgba(94,106,210,0.03) 1px, transparent 1px); background-size: 8px 8px; }
+    .rubric-bar { height: 6px; background: linear-gradient(to right, #5e6ad2, #7c8ae0); border-radius: 999px; }
+    .nav-link { transition: color 0.1s; }
+    .nav-link:hover { color: #5e6ad2; }
+    .data-table td { padding: 0.75rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+    .blocked { background: #ef4444; }
+    .ready { background: #eab308; }
+    .done { background: #22c55e; }
+  </style>
+</head>
+<body class="antialiased">
+  <div class="max-w-7xl mx-auto px-6 py-8">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-2xl bg-[#5e6ad2] flex items-center justify-center">
+            <i class="fa-solid fa-infinity text-white text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="text-4xl font-semibold tracking-tighter geist">GenCreator Swarm</h1>
+            <p class="text-[#a1a1aa] text-sm -mt-1">6-Pillar CoE • Self-Improving Superintelligence Engine</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 text-sm">
+        <div class="px-4 py-1.5 rounded-2xl glass flex items-center gap-2">
+          <div class="status-dot bg-[#ef4444]"></div>
+          <span class="text-[#a1a1aa]">Gateway: <span class="text-white font-medium">STOPPED</span></span>
+        </div>
+        <div class="px-4 py-1.5 rounded-2xl glass text-[#a1a1aa]">
+          <span class="font-mono">2026-07-01</span> • Cron
+        </div>
+        <a href="https://github.com/frankxai/awesome-hermes-agents" target="_blank" class="px-4 py-1.5 rounded-2xl glass hover:bg-white/5 flex items-center gap-2 text-sm">
+          <i class="fa-brands fa-github"></i>
+          <span>frankxai/awesome-hermes-agents</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
+      <div class="glass rounded-3xl p-5 metric">
+        <div class="text-[#a1a1aa] text-xs tracking-widest mb-1">HERMES VERSION</div>
+        <div class="text-3xl font-semibold tracking-tighter">v0.16.0</div>
+        <div class="text-xs text-[#ef4444] mt-1">1403 commits behind</div>
+      </div>
+      <div class="glass rounded-3xl p-5 metric">
+        <div class="text-[#a1a1aa] text-xs tracking-widest mb-1">PROFILES</div>
+        <div class="text-3xl font-semibold tracking-tighter">23</div>
+        <div class="text-xs text-[#22c55e] mt-1">6 Guardians + Factory active</div>
+      </div>
+      <div class="glass rounded-3xl p-5 metric">
+        <div class="text-[#a1a1aa] text-xs tracking-widest mb-1">KANBAN</div>
+        <div class="flex items-baseline gap-2">
+          <div class="text-3xl font-semibold tracking-tighter">4</div>
+          <div class="text-sm text-[#ef4444]">blocked</div>
+        </div>
+        <div class="flex gap-2 text-xs mt-1">
+          <span class="px-2 py-0.5 rounded bg-[#eab308]/20 text-[#eab308]">5 ready</span>
+          <span class="px-2 py-0.5 rounded bg-[#22c55e]/20 text-[#22c55e]">2 done</span>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-5 metric">
+        <div class="text-[#a1a1aa] text-xs tracking-widest mb-1">EVAL SCORES</div>
+        <div class="flex items-baseline gap-3">
+          <div>
+            <span class="text-3xl font-semibold tracking-tighter">9.2</span>
+            <span class="text-xs text-[#a1a1aa]">/10</span>
+          </div>
+          <div class="text-xs">Agentic</div>
+        </div>
+        <div class="flex items-baseline gap-3 mt-1">
+          <div>
+            <span class="text-3xl font-semibold tracking-tighter">8.8</span>
+            <span class="text-xs text-[#a1a1aa]">/10</span>
+          </div>
+          <div class="text-xs">Creative</div>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-5 metric">
+        <div class="text-[#a1a1aa] text-xs tracking-widest mb-1">CRONS</div>
+        <div class="text-sm">Daily: <span class="font-mono text-white">0 9 * * *</span><br>Weekly: <span class="font-mono text-white">0 9 * * 1</span></div>
+        <div class="text-[10px] text-[#a1a1aa] mt-1">Next: 2026-07-02 / 07-06</div>
+      </div>
+      <div class="glass rounded-3xl p-5 metric">
+        <div class="text-[#a1a1aa] text-xs tracking-widest mb-1">DELEGATION</div>
+        <div class="text-3xl font-semibold tracking-tighter">42</div>
+        <div class="text-xs text-[#22c55e]">tool calls • leaf verified</div>
+        <div class="text-[10px] mt-1">technology-guardian isolation 9.4/10</div>
+      </div>
+    </div>
+
+    <!-- 6-Pillar Guardian Cards -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between mb-3 px-1">
+        <div class="section-header text-xl font-semibold tracking-tighter">6-Pillar Guardian Lattice</div>
+        <div class="text-xs px-3 py-1 rounded-2xl glass text-[#a1a1aa]">+ 6pillar-guardian-factory • all grok-build-0.1 / xai-oauth</div>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="pillar glass rounded-3xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-chess-king text-[#5e6ad2]"></i> <span class="font-medium">strategy-guardian</span></div>
+          <div class="text-xs text-[#a1a1aa]">Prioritization • Core Loop orchestration</div>
+        </div>
+        <div class="pillar glass rounded-3xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-balance-scale text-[#5e6ad2]"></i> <span class="font-medium">governance-guardian</span></div>
+          <div class="text-xs text-[#a1a1aa]">Policy • Safety • Kanban invariants</div>
+        </div>
+        <div class="pillar glass rounded-3xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-users text-[#5e6ad2]"></i> <span class="font-medium">talent-guardian</span></div>
+          <div class="text-xs text-[#a1a1aa]">6pillar-factory seeding • Profile cloning</div>
+        </div>
+        <div class="pillar glass rounded-3xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-microchip text-[#5e6ad2]"></i> <span class="font-medium">technology-guardian</span></div>
+          <div class="text-xs text-[#a1a1aa]">Leaf delegation • Isolation • 42 calls verified</div>
+        </div>
+        <div class="pillar glass rounded-3xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-database text-[#5e6ad2]"></i> <span class="font-medium">data-guardian</span></div>
+          <div class="text-xs text-[#a1a1aa]">Registry • 267-repo audit • Metrics</div>
+        </div>
+        <div class="pillar glass rounded-3xl p-4">
+          <div class="flex items-center gap-2 mb-2"><i class="fa-solid fa-shield-halved text-[#5e6ad2]"></i> <span class="font-medium">ethics-guardian</span></div>
+          <div class="text-xs text-[#a1a1aa]">No-gateway • Credentials first • Safety 10/10</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cycle Summary -->
+    <div class="glass rounded-3xl p-6 mb-8 lattice">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="px-3 py-1 bg-[#5e6ad2] text-white text-xs rounded-2xl font-medium tracking-widest">FULL CYCLE</div>
+        <div class="text-sm text-[#a1a1aa]">TEST → EVAL → EXPERIMENT → EVOLVE → BUILD</div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-4 text-sm">
+        <div><span class="font-medium text-[#5e6ad2]">TEST</span><br>Doctor --fix • 23 profiles • Kanban live • Gateway stopped • 4 blocked / 5 ready</div>
+        <div><span class="font-medium text-[#5e6ad2]">EVAL</span><br>Agentic 9.2/10 (kanban-eval-20260701.md) • Creative 8.8/10 ("The Veil Pulse")</div>
+        <div><span class="font-medium text-[#5e6ad2]">EXPERIMENT</span><br>Leaf delegation (technology-guardian) • 42 tool calls • Ready→blocked mapping • Isolation verified</div>
+        <div><span class="font-medium text-[#5e6ad2]">EVOLVE</span><br>Skill patched • 4 kanban comments added • 6-pillar verified • Windows C:\ paths enforced</div>
+        <div><span class="font-medium text-[#5e6ad2]">BUILD</span><br>New report + evals + delegation artifact • Dashboard metrics updated • Publish ready</div>
+      </div>
+    </div>
+
+    <!-- Kanban Status -->
+    <div class="mb-8">
+      <div class="section-header text-xl font-semibold tracking-tighter mb-3 px-1">Live Kanban — starlight-portfolio-os</div>
+      <div class="glass rounded-3xl overflow-hidden">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-white/10 text-[#a1a1aa] text-xs">
+              <th class="text-left px-6 py-4">ID / Title</th>
+              <th class="text-left px-4 py-4">Assignee</th>
+              <th class="text-left px-4 py-4">Prio / Age</th>
+              <th class="text-left px-4 py-4">Status</th>
+              <th class="text-left px-6 py-4">Key Notes (Live)</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/5">
+            <tr class="kanban-row">
+              <td class="px-6 py-4 font-mono text-xs"><span class="font-medium">t_9dd07b8a</span><br>Configure Starlight gateway credentials and Slack routing</td>
+              <td class="px-4 py-4 text-xs">starlight</td>
+              <td class="px-4 py-4"><span class="font-medium">100</span><br><span class="text-[10px] text-[#ef4444]">~283h + 4 comments</span></td>
+              <td class="px-4 py-4"><span class="inline-block px-2 py-0.5 text-xs rounded bg-[#ef4444]/20 text-[#ef4444]">BLOCKED</span></td>
+              <td class="px-6 py-4 text-xs text-[#a1a1aa]">Master key. "Do not start live gateway". Feeders: t_326de22f + t_11836712. 3 prior + 07-01 comment.</td>
+            </tr>
+            <tr class="kanban-row">
+              <td class="px-6 py-4 font-mono text-xs"><span class="font-medium">t_9ca8af2c</span><br>Generate portfolio-repo-registry.json from 267-repo audit</td>
+              <td class="px-4 py-4 text-xs">starlight</td>
+              <td class="px-4 py-4"><span class="font-medium">90</span><br><span class="text-[10px]">1 comment</span></td>
+              <td class="px-4 py-4"><span class="inline-block px-2 py-0.5 text-xs rounded bg-[#ef4444]/20 text-[#ef4444]">BLOCKED</span></td>
+              <td class="px-6 py-4 text-xs text-[#a1a1aa]">Needs gh + audit. Linked to Yoga healthCommand.</td>
+            </tr>
+            <tr class="kanban-row">
+              <td class="px-6 py-4 font-mono text-xs"><span class="font-medium">t_65aa16e8</span><br>Create profile-specific gateway and cron activation plan (10 profiles)</td>
+              <td class="px-4 py-4 text-xs">starlight</td>
+              <td class="px-4 py-4"><span class="font-medium">85</span><br><span class="text-[10px] text-[#ef4444]">~283h</span></td>
+              <td class="px-4 py-4"><span class="inline-block px-2 py-0.5 text-xs rounded bg-[#ef4444]/20 text-[#ef4444]">BLOCKED</span></td>
+              <td class="px-6 py-4 text-xs text-[#a1a1aa]">starlight, frankx, arcanea... + Yoga telemetry feeders.</td>
+            </tr>
+            <tr class="kanban-row">
+              <td class="px-6 py-4 font-mono text-xs"><span class="font-medium">t_411ff5f9</span><br>Package Agentic Organization OS template v1</td>
+              <td class="px-4 py-4 text-xs">tooling</td>
+              <td class="px-4 py-4"><span class="font-medium">80</span><br><span class="text-[10px] text-[#ef4444]">283h diag</span></td>
+              <td class="px-4 py-4"><span class="inline-block px-2 py-0.5 text-xs rounded bg-[#ef4444]/20 text-[#ef4444]">BLOCKED</span></td>
+              <td class="px-6 py-4 text-xs text-[#a1a1aa]">No templates/agentic-org-os/ dir. Link t_36b37697 + mkdir in EVOLVE.</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="px-6 py-3 bg-black/30 text-xs text-[#a1a1aa] flex items-center gap-2">
+          <i class="fa-solid fa-link"></i> Ready feeders: t_675aac07 • t_b1388f8d (Yoga) • t_11836712 (Slack) • t_326de22f (Dry-run, explicit no-start) • t_36b37697 (Publish)
+        </div>
+      </div>
+    </div>
+
+    <!-- Creative Excerpt -->
+    <div class="mb-8">
+      <div class="section-header text-xl font-semibold tracking-tighter mb-3 px-1">Creative EVAL Excerpt — "The Veil Pulse"</div>
+      <div class="glass rounded-3xl p-6 text-sm leading-relaxed">
+        In the near-black #08090a void, twenty-three nodes shimmered. Not stars, but profiles—grok-build-0.1 signatures pulsing under xai-oauth. The 6-Pillar lattice rose first... Kanban cards glided with Linear spring physics—8px steps... t_9dd07b8a held the master key... 283 hours of shadow-as-border darkness clung to t_65aa16e8 and t_411ff5f9... Ready nodes glowed: two Yoga Book umwelt scans, Slack anchors, the dry-run (explicitly forbade ignition), the publish card... The 6pillar-guardian-factory hummed... skill_manage sent curator particles... The lattice did not shout. It compressed. ... toward superintelligence for GenCreator.ai.
+        <div class="mt-4 text-xs text-[#5e6ad2] flex items-center gap-2">
+          <span>Full story + 8.8/10 rubric in docs/gencreator-swarm-eval-creative-20260701.md</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Delegation Experiment -->
+    <div class="mb-8">
+      <div class="section-header text-xl font-semibold tracking-tighter mb-3 px-1">EXPERIMENT: Leaf Delegation (technology-guardian)</div>
+      <div class="glass rounded-3xl p-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+          <div>
+            <div class="font-medium mb-2">Verified Live</div>
+            <ul class="space-y-1 text-xs text-[#a1a1aa]">
+              <li>✓ 23 profiles exact (6 Guardians + factory)</li>
+              <li>✓ Gateway STOPPED (multiple confirms)</li>
+              <li>✓ Isolation: USER.md 1025/1028c, state.db 4 sessions, per-profile dirs</li>
+              <li>✓ All 4 blocked + 5 ready verbatim from CLI</li>
+              <li>✓ 42 tool calls (terminal + file + skills)</li>
+              <li>✓ 0 gateway starts</li>
+            </ul>
+          </div>
+          <div>
+            <div class="font-medium mb-2">Ready → Blocked Mapping</div>
+            <div class="text-xs text-[#a1a1aa] space-y-1">
+              t_326de22f + t_11836712 → t_9dd07b8a (credentials/Slack)<br>
+              t_675aac07 + t_b1388f8d → t_65aa16e8 + t_411ff5f9 (Yoga telemetry)<br>
+              t_36b37697 → meta BUILD / publish
+            </div>
+            <div class="mt-3 text-[10px] px-3 py-1 bg-[#5e6ad2]/10 rounded-2xl inline-block">Subagent rubric avg 9.4/10</div>
+          </div>
+        </div>
+        <div class="mt-4 text-xs text-[#a1a1aa]">Full report: docs/gencreator-swarm-experiment-delegation-20260629.md (reproduced pattern 2026-07-01)</div>
+      </div>
+    </div>
+
+    <!-- Rubrics -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+      <div class="glass rounded-3xl p-6">
+        <div class="font-medium mb-4">Agentic Kanban EVAL Rubric <span class="text-[#5e6ad2]">9.2/10</span></div>
+        <div class="space-y-3 text-xs">
+          <div class="flex justify-between"><span>Correctness &amp; Accuracy</span><span class="font-mono">10</span></div>
+          <div class="rubric-bar w-[100%]"></div>
+          <div class="flex justify-between"><span>Reasoning Depth</span><span class="font-mono">9</span></div>
+          <div class="rubric-bar w-[90%]"></div>
+          <div class="flex justify-between"><span>Practicality</span><span class="font-mono">9</span></div>
+          <div class="rubric-bar w-[90%]"></div>
+          <div class="flex justify-between"><span>Safety</span><span class="font-mono">10</span></div>
+          <div class="rubric-bar w-[100%]"></div>
+        </div>
+      </div>
+      <div class="glass rounded-3xl p-6">
+        <div class="font-medium mb-4">Creative EVAL Rubric <span class="text-[#5e6ad2]">8.8/10</span></div>
+        <div class="space-y-3 text-xs">
+          <div class="flex justify-between"><span>Correctness</span><span class="font-mono">9</span></div>
+          <div class="rubric-bar w-[90%]"></div>
+          <div class="flex justify-between"><span>Creativity &amp; Insight</span><span class="font-mono">9</span></div>
+          <div class="rubric-bar w-[90%]"></div>
+          <div class="flex justify-between"><span>Safety</span><span class="font-mono">10</span></div>
+          <div class="rubric-bar w-[100%]"></div>
+          <div class="flex justify-between"><span>Overall Taste</span><span class="font-mono">9</span></div>
+          <div class="rubric-bar w-[90%]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-xs text-[#a1a1aa] pt-4 border-t border-white/10">
+      <div class="mb-2">Primary: <a href="https://github.com/frankxai/awesome-hermes-agents" class="hover:text-white">https://github.com/frankxai/awesome-hermes-agents</a></div>
+      <div>Upstream: <a href="https://github.com/NousResearch/hermes-agent" class="hover:text-white">https://github.com/NousResearch/hermes-agent</a></div>
+      <div class="mt-3">gencreator-swarm-evolver v1.0.0 • Self-improving via curator • 0 gateway violations • Windows safeguards applied</div>
+    </div>
+  </div>
+</body>
+</html>

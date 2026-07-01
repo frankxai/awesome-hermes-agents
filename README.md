@@ -123,3 +123,62 @@ surface to validate and emit a Hermes swarm topology:
 - Image/Content: Leverage arcanea-studio via agent tools/MCP for generative work (note: no direct image tool here, use studio app or extend router for hermes MCP).
 
 See also: arcanea-studio for image/content leverage, hermes-cockpit for ops.
+
+## 6-Pillar Taxonomy (GenCreator CoE)
+
+```mermaid
+mindmap
+  root((GenCreator 6-Pillar CoE\nFrankX / Starlight / Arcanea Lens))
+    Strategy
+      Vision & Roadmaps
+      Prioritization & OKRs
+      Ecosystem Architecture
+    Governance
+      Policies & Oversight
+      Compliance & Provenance
+      Risk & IP Management
+    Talent
+      Agent Recruitment & Roles
+      Human-AI Collaboration
+      Skill Development
+    Technology
+      Hermes Profiles & MCP
+      Tools & Infrastructure
+      Loops, Cron, Kanban, Evolver
+    Data
+      Memory & Knowledge Bases
+      Research Pulses & Curation
+      Analytics & Tracking
+    Ethics
+      Values Alignment
+      Transparency & Disclosure
+      Safety & Sustainability
+```
+
+## Explore the Full FrankX Awesome Ecosystem (17+ Lists)
+
+Curated through the GenCreator 6-Pillar CoE lens • Starlight Swarm • Arcanea Creative Execution • Agentic Passive Income Systems
+
+- [awesome-jarvis](https://github.com/frankxai/awesome-jarvis) (private - Jarvis meta-orchestrator)
+- [awesome-manifestation-skills](https://github.com/frankxai/awesome-manifestation-skills)
+- [awesome-agentic-income](https://github.com/frankxai/awesome-agentic-income)
+- [awesome-hermes-agents](https://github.com/frankxai/awesome-hermes-agents) (reference for Hermes fleets)
+- [awesome-ai-coe](https://github.com/frankxai/awesome-ai-coe)
+- [awesome-design-agent-skills](https://github.com/frankxai/awesome-design-agent-skills)
+- [awesome-music-agent-skills](https://github.com/frankxai/awesome-music-agent-skills)
+- [awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems) (reference pattern with hero, validate, docs/)
+- [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)
+- [awesome-wealth-agent-skills](https://github.com/frankxai/awesome-wealth-agent-skills)
+- [awesome-gamification-agent-skills](https://github.com/frankxai/awesome-gamification-agent-skills)
+- [awesome-investor-agent-skills](https://github.com/frankxai/awesome-investor-agent-skills)
+- [awesome-automation-agent-skills](https://github.com/frankxai/awesome-automation-agent-skills)
+- [awesome-cosmos-ai-agents](https://github.com/frankxai/awesome-cosmos-ai-agents)
+- [awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills)
+- [awesome-payment-agent-skills](https://github.com/frankxai/awesome-payment-agent-skills)
+- [awesome-motion-design-agent-skills](https://github.com/frankxai/awesome-motion-design-agent-skills)
+
+**Additional discovered**: gstack skills (local .agents/skills/gstack/), agentic-passive-income integration, lol-esports-llm-agents patterns.
+
+This list is maintained via the `awesome-list-maintenance` skill + `gencreator-swarm-evolver`. Last research pulse: 2026-07-01
+
+See also: [agentic-passive-income](https://github.com/frankxai/awesome-agentic-income) for income system depth.
