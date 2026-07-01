@@ -16,3 +16,12 @@ coverage/
 
 .hermes/
 hermes-home/
+
+# Starlight/ACOS temporary files
+.agent/
+.system_generated/
+.starlight/
+.gemini/
+.agent-harness.json
+AGENTS.md
+
