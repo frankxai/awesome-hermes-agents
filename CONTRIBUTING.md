@@ -1,28 +1,20 @@
-# Contributing
+# Contributing Standards
 
-This repo is an independent operator guide for Hermes Agent fleets. Contributions should make the system easier to run, verify, deploy, or explain.
+We welcome contributions that align with our core thesis of **verifiable, world-healing, and rigorously-tested agent intelligence**.
 
-## Standards
+## The Golden Rules
 
-- Prefer official Hermes/Nous docs for behavior claims.
-- Link primary sources for deployment/provider details.
-- Keep provenance clear: this is not an official Nous Research repository.
-- Do not commit secrets, provider keys, profile homes, session data, or memory databases.
-- Prefer reproducible specs and scripts over screenshots or vague prose.
+1. **No Hallucinated Tooling**: If you submit an agent skill, prompt, or tool, it must be verified to work against a real API or framework.
+2. **Safety First**: Any capability that interfaces with the physical world, live capital, or critical infrastructure must include strict human-in-the-loop approval gates.
+3. **High Signal, Low Noise**: We prefer deeply curated, opinionated lists over exhaustive link dumps. If you add a repository, explain *why* it is the best-in-class choice for that specific layer of the agent OS.
+4. **Formatting**: Ensure your Markdown is clean. If adding to a list, use the existing `<details>` structure to preserve the scannability of the README.
 
-## Good Additions
+## How to Submit
 
-- Tested profile templates.
-- Deployment manifests with persistent storage and secret-store notes.
-- Control-plane scripts that print or validate commands before executing them.
-- Case studies that distinguish Hermes Agent, Hermes models, and third-party managed products.
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/amazing-new-skill`).
+3. Commit your changes (`git commit -m 'feat: Add incredible new skill'`).
+4. Push to the branch (`git push origin feature/amazing-new-skill`).
+5. Open a Pull Request.
 
-## Validation
-
-Before opening a PR or pushing to `main`, run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 list
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 emit-local
-powershell -NoProfile -ExecutionPolicy Bypass -Command "Get-Content .\configs\starlight-hermes-swarm.example.json -Raw | ConvertFrom-Json | Out-Null"
-```
+Your PR will be reviewed against our strict quality gates. We expect a high standard of engineering and documentation. Thank you for helping build the intelligence layer.
