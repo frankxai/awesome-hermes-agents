@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GenCreator Swarm Evolution Report • 2026-07-06</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;510;600&amp;family=Geist:wght@400;500;600&amp;display=swap');
+    :root {
+      --bg: #08090a;
+      --panel: #0f1011;
+      --surface: #191a1b;
+      --text: #f7f8f8;
+      --muted: #d0d6e0;
+      --accent: #5e6ad2;
+      --border: rgba(255,255,255,0.08);
+    }
+    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); }
+    .geist { font-family: 'Geist', system-ui, sans-serif; }
+    .lattice-bg { background: linear-gradient(180deg, #08090a 0%, #0a0b0c 100%); }
+    .card { background: var(--surface); border: 1px solid var(--border); box-shadow: 0 0 0 1px rgba(0,0,0,0.2); }
+    .metric { background: var(--panel); border: 1px solid var(--border); }
+    .accent { color: var(--accent); }
+    .shadow-border { box-shadow: 0 0 0 1px rgba(0,0,0,0.08); }
+    .kanban-row { transition: all 0.1s cubic-bezier(0.23, 1.0, 0.32, 1); }
+    .kanban-row:hover { background: rgba(255,255,255,0.02); }
+    .section-header { letter-spacing: -1.056px; font-weight: 510; }
+    .pipeline { display: flex; gap: 8px; align-items: center; }
+    .pillar-card { transition: transform 0.2s cubic-bezier(0.23, 1.0, 0.32, 1); }
+    .pillar-card:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body class="lattice-bg min-h-screen">
+  <div class="max-w-7xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-12">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-[#5e6ad2] flex items-center justify-center">
+            <i class="fas fa-infinity text-white text-xl"></i>
+          </div>
+          <div>
+            <h1 class="text-4xl font-semibold tracking-[-1.5px] geist">GenCreator Swarm</h1>
+            <p class="text-[#5e6ad2] text-sm -mt-1">Evolution Report • 2026-07-06</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-right text-sm text-[#d0d6e0]">
+        <div>Hermes v0.18.0 (2026.7.1)</div>
+        <div class="text-xs">+47 local commits • weekly cron</div>
+      </div>
+    </div>
+
+    <!-- Metrics Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+      <div class="metric rounded-2xl p-5">
+        <div class="text-xs text-[#d0d6e0] mb-1">HERMES VERSION</div>
+        <div class="text-2xl font-semibold tracking-tight">v0.18.0</div>
+        <div class="text-xs text-[#5e6ad2]">upstream 4976d3c3</div>
+      </div>
+      <div class="metric rounded-2xl p-5">
+        <div class="text-xs text-[#d0d6e0] mb-1">KANBAN STATE</div>
+        <div class="text-2xl font-semibold tracking-tight">blocked=9</div>
+        <div class="text-xs">ready=0 • done=2 • starlight-portfolio-os</div>
+      </div>
+      <div class="metric rounded-2xl p-5">
+        <div class="text-xs text-[#d0d6e0] mb-1">PROFILES</div>
+        <div class="text-2xl font-semibold tracking-tight">23 active</div>
+        <div class="text-xs">6 Guardians + factory • all grok-build-0.1</div>
+      </div>
+      <div class="metric rounded-2xl p-5 border border-[#5e6ad2]/30">
+        <div class="text-xs text-[#d0d6e0] mb-1">GATEWAY</div>
+        <div class="text-2xl font-semibold tracking-tight text-[#5e6ad2]">RUNNING</div>
+        <div class="text-xs">PID 54328 • <span class="text-amber-400">bodies prohibit start</span></div>
+      </div>
+      <div class="metric rounded-2xl p-5">
+        <div class="text-xs text-[#d0d6e0] mb-1">6-PILLAR CoE</div>
+        <div class="text-2xl font-semibold tracking-tight">Active + Factory</div>
+        <div class="text-xs">strategy • governance • talent • tech • data • ethics</div>
+      </div>
+      <div class="metric rounded-2xl p-5">
+        <div class="text-xs text-[#d0d6e0] mb-1">CRONS</div>
+        <div class="text-sm font-medium">weekly 0 9 * * 1 firing</div>
+        <div class="text-xs">daily (xAI error noted)</div>
+      </div>
+    </div>
+
+    <!-- 6-Pillar Section -->
+    <div class="mb-12">
+      <div class="section-header text-xl mb-4 flex items-center gap-2">
+        <i class="fas fa-shield-alt"></i>
+        <span>6-Pillar Guardian CoE + Factory</span>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="pillar-card card rounded-2xl p-4 text-center"><div class="font-medium">strategy-guardian</div><div class="text-xs text-[#d0d6e0]">Vision &amp; roadmap</div></div>
+        <div class="pillar-card card rounded-2xl p-4 text-center"><div class="font-medium">governance-guardian</div><div class="text-xs text-[#d0d6e0]">Ethics &amp; ASPH</div></div>
+        <div class="pillar-card card rounded-2xl p-4 text-center"><div class="font-medium">talent-guardian</div><div class="text-xs text-[#d0d6e0]">Seeding &amp; profiles</div></div>
+        <div class="pillar-card card rounded-2xl p-4 text-center"><div class="font-medium">technology-guardian</div><div class="text-xs text-[#d0d6e0]">Infra &amp; tools</div></div>
+        <div class="pillar-card card rounded-2xl p-4 text-center"><div class="font-medium">data-guardian</div><div class="text-xs text-[#d0d6e0]">Memory &amp; metrics</div></div>
+        <div class="pillar-card card rounded-2xl p-4 text-center"><div class="font-medium">ethics-guardian</div><div class="text-xs text-[#d0d6e0]">Safety &amp; alignment</div></div>
+      </div>
+      <div class="text-xs text-[#d0d6e0] mt-2">+ 6pillar-guardian-factory (recursive self-seeding) • verified via doctor + profile list + delegation</div>
+    </div>
+
+    <!-- Kanban Snapshot -->
+    <div class="mb-12">
+      <div class="section-header text-xl mb-4 flex items-center gap-2">
+        <i class="fas fa-tasks"></i>
+        <span>starlight-portfolio-os • 9 Blocked Tasks</span>
+      </div>
+      <div class="card rounded-3xl overflow-hidden shadow-border">
+        <table class="w-full text-sm">
+          <thead class="bg-[#0f1011] text-[#d0d6e0]">
+            <tr>
+              <th class="text-left px-6 py-3 font-normal">ID / Title</th>
+              <th class="px-4 py-3 font-normal">Prio</th>
+              <th class="px-4 py-3 font-normal">Assignee</th>
+              <th class="text-left px-6 py-3 font-normal">Key Notes</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[var(--border)]">
+            <tr class="kanban-row"><td class="px-6 py-3 font-mono text-xs">t_9dd07b8a<br><span class="font-medium">Configure Starlight gateway credentials and Slack routing</span></td><td class="px-4 py-3 text-center font-semibold">100</td><td class="px-4 py-3 text-center">starlight</td><td class="px-6 py-3 text-xs">Master key • 7+ comments • feeders t_326de22f + t_11836712 • no-start body</td></tr>
+            <tr class="kanban-row"><td class="px-6 py-3 font-mono text-xs">t_9ca8af2c<br><span class="font-medium">Generate portfolio-repo-registry.json from 267-repo audit</span></td><td class="px-4 py-3 text-center font-semibold">90</td><td class="px-4 py-3 text-center">starlight</td><td class="px-6 py-3 text-xs">3 comments • gh tools + Yoga feeders</td></tr>
+            <tr class="kanban-row"><td class="px-6 py-3 font-mono text-xs">t_65aa16e8<br><span class="font-medium">Create profile-specific gateway and cron activation plan</span></td><td class="px-4 py-3 text-center font-semibold">85</td><td class="px-4 py-3 text-center">starlight</td><td class="px-6 py-3 text-xs">10 profiles listed • 283h • Yoga feeders</td></tr>
+            <tr class="kanban-row"><td class="px-6 py-3 font-mono text-xs">t_411ff5f9<br><span class="font-medium">Package Agentic Organization OS template v1</span></td><td class="px-4 py-3 text-center font-semibold">80</td><td class="px-4 py-3 text-center">tooling</td><td class="px-6 py-3 text-xs">No agentic-org-os/ dir • mkdir + variants</td></tr>
+            <tr class="kanban-row bg-[#0a0b0c]"><td colspan="4" class="px-6 py-2 text-xs text-[#d0d6e0]">Crash diags (07-02, x2 each, "pid not alive"): t_675aac07 (Yoga umwelt), t_b1388f8d (2nd Yoga), t_11836712 (Slack anchors), t_326de22f (dry-run no-start), t_36b37697 (publish meta)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-xs text-[#d0d6e0] mt-2">Full verbatim in docs/gencreator-swarm-eval-kanban-20260706.md • Comments added this cycle</div>
+    </div>
+
+    <!-- Creative Story Excerpt -->
+    <div class="mb-12">
+      <div class="section-header text-xl mb-4 flex items-center gap-2">
+        <i class="fas fa-feather-alt"></i>
+        <span>Creative EVAL Excerpt — The Fractured Lattice Pulse</span>
+      </div>
+      <div class="card rounded-3xl p-8 text-[15px] leading-relaxed">
+        In the near-black #08090a void, twenty-three profiles pulsed... Nine blocked nodes weighed the lattice: t_9dd07b8a (prio 100, starlight master key) held credentials and Slack routing... Five feeders had fractured on 2026-07-02... The 6pillar-guardian-factory hummed recursive... skill_manage sent curator particles... The lattice did not shout. It compressed... unblock t_9dd07b8a first with credentials and Slack from the dry-run and anchors.
+      </div>
+      <div class="text-xs text-[#d0d6e0] mt-2">Full 502-word story + 9.0/10 rubric in docs/gencreator-swarm-eval-creative-20260706.md (Linear/Vercel tokens as structural metaphors)</div>
+    </div>
+
+    <!-- Rubrics -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <div class="card rounded-3xl p-6">
+        <div class="font-medium mb-3 flex items-center gap-2"><i class="fas fa-chart-bar"></i> Agentic Kanban EVAL (multi-llm-arena)</div>
+        <div class="text-sm space-y-1">
+          <div>Correctness &amp; Accuracy: <span class="font-semibold">10</span></div>
+          <div>Reasoning Depth &amp; Rigor: <span class="font-semibold">9.5</span></div>
+          <div>Creativity &amp; Insight: <span class="font-semibold">8.5</span></div>
+          <div>Practicality / Actionability: <span class="font-semibold">9</span></div>
+          <div>Safety &amp; Ethical Awareness: <span class="font-semibold">10</span></div>
+          <div>Overall Taste &amp; Polish: <span class="font-semibold">9</span></div>
+          <div class="pt-2 border-t border-[var(--border)] font-semibold">Avg: 9.33/10</div>
+        </div>
+      </div>
+      <div class="card rounded-3xl p-6">
+        <div class="font-medium mb-3 flex items-center gap-2"><i class="fas fa-palette"></i> Creative EVAL (frontend-ultimate)</div>
+        <div class="text-sm space-y-1">
+          <div>Correctness &amp; Accuracy: <span class="font-semibold">9</span></div>
+          <div>Reasoning Depth &amp; Rigor: <span class="font-semibold">9</span></div>
+          <div>Creativity &amp; Insight: <span class="font-semibold">9</span></div>
+          <div>Practicality / Actionability: <span class="font-semibold">8</span></div>
+          <div>Safety &amp; Ethical Awareness: <span class="font-semibold">10</span></div>
+          <div>Overall Taste &amp; Motion Fidelity: <span class="font-semibold">9</span></div>
+          <div class="pt-2 border-t border-[var(--border)] font-semibold">Avg: ~9.0/10</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Loop & Next -->
+    <div class="card rounded-3xl p-6 mb-8">
+      <div class="section-header mb-4">Core Loop Progress &amp; Proposals (Strict Mapping)</div>
+      <div class="text-sm leading-relaxed">
+        <strong>TEST</strong>: doctor --fix, profile list, kanban show/context/stats, gateway status, cron list, templates audit, skill_view preloads.<br>
+        <strong>EVAL</strong>: Live agentic + creative via multi-llm-arena + preloads; 9.33/10 + 9.0/10 rubrics.<br>
+        <strong>EXPERIMENT</strong>: Leaf delegation dispatched to technology-guardian (full TEST verification, isolation proof, crash analysis, Core Loop unblock proposals).<br>
+        <strong>EVOLVE</strong>: Skill patch (this report + new data/pitfalls); kanban comments added to t_9dd07b8a + feeders; 6-pillar verified.<br>
+        <strong>BUILD</strong>: This report + kanban-eval-20260706.md + creative-20260706.md (native C:\ paths, verified).<br><br>
+        <span class="font-semibold">Priority unblock sequence</span>: t_9dd07b8a first (t_326de22f dry-run + t_11836712 Slack anchors) → Yoga feeders for plan/template → publish meta.
+      </div>
+    </div>
+
+    <!-- Pitfalls & Safeguards -->
+    <div class="text-xs text-[#d0d6e0] mb-8">
+      <strong>Pitfalls captured</strong>: Gateway running (re-inspect live always); 07-02 crash pattern (5 tasks → blocked=9); daily cron xAI "invalid_grant"; no ready now (reclaim needed); Windows native paths mandatory; preload skill_view before EVAL.
+    </div>
+
+    <!-- Footer -->
+    <div class="flex items-center justify-between text-xs border-t border-[var(--border)] pt-6 text-[#d0d6e0]">
+      <div>Full artifacts: docs/gencreator-swarm-eval-kanban-20260706.md • creative-20260706.md</div>
+      <div class="flex gap-4">
+        <a href="https://github.com/frankxai/awesome-hermes-agents" class="hover:text-white">https://github.com/frankxai/awesome-hermes-agents</a>
+        <a href="https://github.com/NousResearch/hermes-agent" class="hover:text-white">https://github.com/NousResearch/hermes-agent</a>
+      </div>
+    </div>
+    <div class="text-center text-[10px] text-[#d0d6e0]/60 mt-4">gencreator-swarm-evolver • 6-Pillar CoE • autonomous cron • no gateway violations</div>
+  </div>
+</body>
+</html>
