@@ -1,6 +1,6 @@
 # Sources
 
-Checked on 2026-06-17.
+Research pulse: **2026-07-16** (links re-checked for this elevation pass).
 
 ## Official Hermes / Nous Sources
 
@@ -24,32 +24,49 @@ Checked on 2026-06-17.
 - CLI command reference: https://hermes-agent.nousresearch.com/docs/reference/cli-commands
 - Run Hermes with Nous Portal: https://hermes-agent.nousresearch.com/docs/guides/run-hermes-with-nous-portal
 - Nous Portal: https://portal.nousresearch.com/
+- agentskills.io: https://agentskills.io
+- autonovel: https://github.com/NousResearch/autonovel
+- hermes-agent-self-evolution: https://github.com/NousResearch/hermes-agent-self-evolution
+- hermes-paperclip-adapter: https://github.com/NousResearch/hermes-paperclip-adapter
+
+## FrankX companion lists
+
+- awesome-hermes-agents (this repo): https://github.com/frankxai/awesome-hermes-agents
+- awesome-hermes-agent-skills: https://github.com/frankxai/awesome-hermes-agent-skills
+- awesome-agent-operating-systems: https://github.com/frankxai/awesome-agent-operating-systems
+- agentic-architecture-field-guide: https://github.com/frankxai/agentic-architecture-field-guide
+
+## Community awesome lists (related, independent)
+
+- 0xNyk/awesome-hermes-agent: https://github.com/0xNyk/awesome-hermes-agent
+- SamurAIGPT/awesome-hermes-agent: https://github.com/SamurAIGPT/awesome-hermes-agent
+
+## Notable ecosystem projects (sample, 2026-07-16)
+
+- nesquena/hermes-webui: https://github.com/nesquena/hermes-webui
+- EKKOLearnAI/hermes-studio: https://github.com/EKKOLearnAI/hermes-studio
+- outsourc-e/hermes-workspace: https://github.com/outsourc-e/hermes-workspace
+- fathah/hermes-desktop: https://github.com/fathah/hermes-desktop
+- farion1231/cc-switch: https://github.com/farion1231/cc-switch
+- garrytan/gbrain: https://github.com/garrytan/gbrain
+- colbymchenry/codegraph: https://github.com/colbymchenry/codegraph
+- iOfficeAI/AionUi: https://github.com/iOfficeAI/AionUi
+- mnfst/manifest: https://github.com/mnfst/manifest
+- screenpipe/screenpipe: https://github.com/screenpipe/screenpipe
 
 ## Deployment / Platform Sources
 
 - Railway multi-agent system guide: https://docs.railway.com/guides/multi-agent-system
-- Hermes Telegram docs mentioning Fly/Railway/Render webhook deployment posture: https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram
-- Hermes WhatsApp Cloud docs mentioning Cloudflare Tunnel: https://hermes-agent.nousresearch.com/docs/user-guide/messaging/whatsapp-cloud
-
-## Desktop Crash / Electron Sources
-
-- Electron app docs: https://electronjs.org/docs/latest/api/app
-- Electron breaking changes for renderer/gpu process events: https://electronjs.org/docs/latest/breaking-changes
-- Stack Overflow discussion noting `--disable-gpu-sandbox` for `GPU process isn't usable`: https://stackoverflow.com/questions/68874940/gpu-process-isnt-usable-goodbye
-- Recent Windows Electron workaround discussion combining GPU flags with sandbox disablement: https://discuss.ai.google.dev/t/antigravity-2-0-stops-launching-after-reboot-on-windows-workaround-using-electron-flags/168641
+- Hermes Telegram docs (Fly/Railway/Render posture): https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram
+- Hermes WhatsApp Cloud (Cloudflare Tunnel): https://hermes-agent.nousresearch.com/docs/user-guide/messaging/whatsapp-cloud
 
 ## Adjacent Managed / Community Sources
 
 - Higgsfield Supercomputer intro: https://higgsfield.ai/supercomputer-intro
 - NVIDIA Hermes Agent + NemoClaw post: https://developer.nvidia.com/blog/deploy-self-evolving-agents-for-faster-more-secure-research-with-a-hermes-agent-and-nvidia-nemoclaw/
-- LiteLLM Agent Platform local repo: `C:\Users\frank\starlight\repos\litellm-agent-platform`
-- Local Hermes bridge template: `C:\Users\frank\starlight\repos\litellm-agent-platform\templates\hermes`
 
-## Local Evidence
+## Local Evidence (maintainer machine — not public SSOT)
 
-- Hermes CLI path: `C:\Users\frank\AppData\Local\hermes\hermes-agent\venv\Scripts\hermes.exe`
-- Hermes source path: `C:\Users\frank\AppData\Local\hermes\hermes-agent`
-- Hermes home: `C:\Users\frank\AppData\Local\hermes`
-- Starlight Intelligence System: `C:\Users\frank\starlight\repos\Starlight-Intelligence-System`
-- Hermes cockpit: `C:\Users\frank\starlight\repos\hermes-cockpit`
-- Starlight swarm: `C:\Users\frank\starlight\repos\starlight-swarm`
+- Hermes CLI / home under `%LOCALAPPDATA%\hermes` on Windows
+- Companion skills SSOT: `starlight/repos/awesome-hermes-agent-skills`
+- Operator docs + swarm templates: this repository
