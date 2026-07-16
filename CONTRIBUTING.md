@@ -4,23 +4,26 @@ We welcome contributions that align with **verifiable, high-signal Hermes Agent 
 
 ## Scope of this repository
 
-This is the **agents / ops** list:
+This is a classic **awesome list of the Hermes Agent ecosystem** (web-wide):
 
-- profile armies, Kanban patterns, deploy matrices, control-plane templates
-- operator decision guides and architecture claims discipline
-- curated links to Hermes runtimes, UIs, and multi-agent surfaces
+- UIs, tools, memory layers, multi-agent systems, deploy packs
+- high-signal links with a one-line *why*
+- optional operator docs under `docs/` (our playbooks, clearly labeled)
 
-**Skill packs (`SKILL.md`)** belong in:
+**Skill-pack-heavy entries** should prefer:
 
 → [frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)
 
+Do **not** treat PRs as a funnel into FrankX products. Prefer other people's excellent work.
+
 ## The Golden Rules
 
-1. **No hallucinated tooling** — entries must point at real, checkable sources.
-2. **Safety first** — anything with shell, capital, or production access needs human gates called out.
-3. **High signal, low noise** — explain *why* the resource is best-in-class for its layer.
-4. **Provenance** — do not claim official Nous ownership. Follow [docs/provenance-and-naming.md](docs/provenance-and-naming.md).
-5. **Formatting** — match README tables and markdown style; keep mobile-scannable.
+1. **Web first** — the list must stay useful if every FrankX link were removed.
+2. **No hallucinated tooling** — entries must point at real, checkable sources.
+3. **Safety first** — shell, capital, or production access needs human gates called out.
+4. **High signal, low noise** — explain *why* the resource is best-in-class for its layer.
+5. **Provenance** — do not claim official Nous ownership. Follow [docs/provenance-and-naming.md](docs/provenance-and-naming.md).
+6. **Formatting** — match README tables; keep mobile-scannable.
 
 ## How to Submit
 

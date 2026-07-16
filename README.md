@@ -2,309 +2,280 @@
   <img src="assets/hero.svg" alt="Awesome Hermes Agents" width="100%">
 </p>
 
-<h1 align="center">✦ Awesome Hermes Agents</h1>
+<h1 align="center">Awesome Hermes Agents</h1>
 
 <p align="center">
-  <strong>The operator playbook for <a href="https://github.com/NousResearch/hermes-agent">Hermes Agent</a> — profiles, Kanban swarms, deploy matrices, control planes, and Starlight composition.</strong>
+  <strong>A curated list of the best Hermes Agent resources from across the web — runtimes, UIs, skills, plugins, memory, multi-agent tools, deploy packs, and operator guides.</strong>
 </p>
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"></a>
   <a href="https://github.com/frankxai/awesome-hermes-agents/actions/workflows/link-checker.yml"><img src="https://github.com/frankxai/awesome-hermes-agents/actions/workflows/link-checker.yml/badge.svg" alt="Link Check"></a>
-  <a href="https://github.com/NousResearch/hermes-agent"><img src="https://img.shields.io/github/stars/NousResearch/hermes-agent?style=flat&label=hermes-agent%20stars" alt="Hermes Agent stars"></a>
+  <a href="https://github.com/NousResearch/hermes-agent"><img src="https://img.shields.io/github/stars/NousResearch/hermes-agent?style=flat&label=hermes-agent" alt="Hermes Agent stars"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT License"></a>
-  <a href="https://frankx.ai"><img src="https://img.shields.io/badge/Maintained%20by-FrankX-0ea5e9?style=flat" alt="FrankX"></a>
 </p>
 
 <p align="center">
-  <a href="#-start-here">Start Here</a> ·
-  <a href="#-agents-vs-skills">Agents vs Skills</a> ·
-  <a href="#-official">Official</a> ·
-  <a href="#-curated-ecosystem">Ecosystem</a> ·
-  <a href="#-operator-docs">Operator Docs</a> ·
-  <a href="#-deploy">Deploy</a> ·
-  <a href="#-companion-repos">Companions</a>
+  <a href="#contents">Contents</a> ·
+  <a href="#official">Official</a> ·
+  <a href="#skills--plugins">Skills</a> ·
+  <a href="#uis--workspaces">UIs</a> ·
+  <a href="#memory--context">Memory</a> ·
+  <a href="#tools--ops">Tools</a> ·
+  <a href="#multi-agent--swarms">Swarms</a> ·
+  <a href="#operator-playbooks-this-repo">Operator docs</a>
 </p>
 
 ---
 
-> **Independent FrankX / Starlight curation — not an official Nous Research repository.**  
-> Official behavior SSOT: [Hermes Agent docs](https://hermes-agent.nousresearch.com/docs/) · [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)  
-> Disclosure: product names and trademarks belong to their respective owners. See [provenance](docs/provenance-and-naming.md).
+> Independent curation by FrankX / Starlight. **Not** an official Nous Research repo.  
+> Behavior SSOT: [hermes-agent docs](https://hermes-agent.nousresearch.com/docs/) · [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent)
 
----
+**What this list is:** classic [awesome](https://awesome.re) style — high-signal projects **from the whole ecosystem**, not a funnel into our own products.
 
-## ✦ Agents vs Skills (read this first)
+**Split with the skills list**
 
-There are **two** FrankX lists for Hermes. They are not duplicates.
-
-| Repo | Role | Put here |
-| --- | --- | --- |
-| **[awesome-hermes-agents](https://github.com/frankxai/awesome-hermes-agents)** ← *you are here* | **Agents / ops / runtime** | Profiles, Kanban, deploy, control plane, dashboards, swarm topology, operator decision guides, architecture |
-| **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)** | **Skills / packs / portfolio OS** | `SKILL.md` packs, free vs gated classification, publish playbook, skill portfolio maintenance |
-
-```text
-Hermes Agent runtime  →  this repo (how you run agents)
-Reusable procedures   →  awesome-hermes-agent-skills (what agents load)
-```
-
-**Sibling community lists** (ecosystem index, different editorial voice):
-
-- [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) — broad skills/plugins/tools directory  
-- [SamurAIGPT/awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) — community curated skills & integrations  
-
-This repo’s edge: **founder operator playbooks**, **Starlight control-plane patterns**, **deploy matrices**, **profile armies**, and **executable swarm configs** — not another undifferentiated link dump.
-
----
-
-## ✦ Start Here
-
-| Need | Go |
+| List | Focus |
 | --- | --- |
-| Install Hermes | [Official installation](https://hermes-agent.nousresearch.com/docs/getting-started/installation) · [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart) |
-| Windows desktop / local | [Local Windows Setup](docs/local-windows-setup.md) · [Official Windows native](https://hermes-agent.nousresearch.com/docs/user-guide/windows-native) |
-| First multi-agent setup | [Operator Decision Guide](docs/operator-decision-guide.md) · [Architecture](docs/architecture.md) · [Kanban tutorial](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial) |
-| Deploy off-laptop | [Deployment Matrix](docs/deployment-matrix.md) · `templates/deploy/` |
-| Load skills | **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)** · [Creating skills](https://hermes-agent.nousresearch.com/docs/developer-guide/creating-skills) |
-| Swarm config example | [`configs/starlight-hermes-swarm.example.json`](configs/starlight-hermes-swarm.example.json) · [`scripts/hermes-swarm.ps1`](scripts/hermes-swarm.ps1) |
+| **This repo** | Agents, UIs, tools, memory, multi-agent, deploy, operator patterns |
+| **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)** | Deep skills catalog (web-wide packs + free packs we maintain) |
 
-### Minimal profile army
+Other excellent independent directories (use them too):
 
-```bash
-hermes profile create conductor
-hermes profile create coder
-hermes profile create researcher
-hermes profile create publisher
+- [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) (~4.7k★) — large skills/plugins/tools directory  
+- [SamurAIGPT/awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) (~1.8k★) — skills, plugins, maturity tags  
 
-# Durable multi-agent board (shared across profiles)
-hermes kanban
-# or open the web dashboard sessions view after `hermes dashboard`
-```
-
-Use **profiles as durable identities** (own config, memory, skills, gateway). Use **Kanban** for durable task state. Do not fake “swarms” as anonymous port clones.
+Research pulse: **2026-07-16**. Stars are approximate; prefer maintenance + docs over vanity stars.
 
 ---
 
-## ✦ What “Hermes” means
+## Contents
 
-| Term | What it is |
+- [Official](#official)
+- [Skills & plugins](#skills--plugins)
+- [UIs & workspaces](#uis--workspaces)
+- [Memory & context](#memory--context)
+- [Tools & ops](#tools--ops)
+- [Multi-agent & swarms](#multi-agent--swarms)
+- [Deploy & hosting](#deploy--hosting)
+- [Domain applications](#domain-applications)
+- [Learning & guides](#learning--guides)
+- [Operator playbooks (this repo)](#operator-playbooks-this-repo)
+- [Related awesome lists](#related-awesome-lists)
+- [Contributing](#contributing)
+
+---
+
+## Official
+
+| Project | Notes |
 | --- | --- |
-| **Hermes Agent** | Open-source agent framework by [Nous Research](https://github.com/NousResearch/hermes-agent) |
-| **Hermes models** | Model lineage (e.g. Hermes 3) — not the same as the Agent runtime |
-| **Nous Portal / Tool Gateway** | Official model + hosted tool routing |
-| **Starlight Hermes pattern** | FrankX composition: profiles, skills, SIS memory/provenance, Codex-managed config |
-| **Higgsfield Supercomputer** | Adjacent managed creative product — **not** hosted Hermes Agent unless they document it |
+| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Core runtime — profiles, skills, Kanban, messaging gateway, backends |
+| [Official docs](https://hermes-agent.nousresearch.com/docs/) | Install, config, skills, Kanban, security, MCP, cron |
+| [Nous Portal](https://portal.nousresearch.com/) | Official models + Tool Gateway |
+| [agentskills.io](https://agentskills.io) | Cross-agent skill standard (Hermes-compatible) |
+| [autonovel](https://github.com/NousResearch/autonovel) | Long-form writing pipeline on Hermes |
+| [hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | DSPy + GEPA self-improvement research |
+| [hermes-paperclip-adapter](https://github.com/NousResearch/hermes-paperclip-adapter) | Hermes as managed Paperclip worker |
+| [tinker-atropos](https://github.com/NousResearch/tinker-atropos) | RL / trajectory training infrastructure |
+| [Discord](https://discord.gg/NousResearch) | Community |
+
+Key docs: [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profiles) · [Kanban](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban) · [Skills](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) · [Creating skills](https://hermes-agent.nousresearch.com/docs/developer-guide/creating-skills)
 
 ---
 
-## ✦ Official
+## Skills & plugins
+
+> Full web-wide skills table lives in **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)**. Highlights below so this agents list stays useful standalone.
+
+### Start with these (ecosystem, not ours)
+
+| Project | Why |
+| --- | --- |
+| [wondelai/skills](https://github.com/wondelai/skills) | Broad agentskills.io library for Hermes + Claude Code + others (~1.6k★) |
+| [Romanescu11/hermes-skill-factory](https://github.com/Romanescu11/hermes-skill-factory) | Meta-skill: turn real workflows into reusable skills |
+| [42-evey/hermes-plugins](https://github.com/42-evey/hermes-plugins) | Goals, inter-agent bridge, model selection, cost control |
+| [tlehman/litprog-skill](https://github.com/tlehman/litprog-skill) | Literate programming across Hermes / Claude Code / OpenCode |
+| [Cranot/super-hermes](https://github.com/Cranot/super-hermes) | Skills that teach Hermes to write better analytical prompts |
+| [witt3rd/oh-my-hermes](https://github.com/witt3rd/oh-my-hermes) | Multi-agent orchestration skills (research → plan → verified exec) |
+| [markoblogo/abvx-agent-skills](https://github.com/markoblogo/abvx-agent-skills) | Small auditable coding-agent skillpack (diffs, evidence, review) |
+| [AMAP-ML/SkillClaw](https://github.com/AMAP-ML/SkillClaw) | Auto-evolve / dedupe skill libraries from session data |
+| [mukul975/Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) | Huge MITRE-mapped security skill set (agentskills.io) |
+| [black-forest-labs/skills](https://github.com/black-forest-labs/skills) | Official FLUX image skills |
+| [Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) | draw.io diagrams from NL; works on Hermes |
+| [CorpusIQ/corpusiq-docs](https://github.com/CorpusIQ/corpusiq-docs) | Business ops skill library + many MCP connectors |
+| [longbridge/skills](https://github.com/longbridge/skills) | Markets / portfolio skills (HK/US/A-share/SG) |
+| [ZeroPointRepo/youtube-skills](https://github.com/ZeroPointRepo/youtube-skills) | YouTube search + robust transcripts |
+
+**Browse more:** [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) · [0xNyk](https://github.com/0xNyk/awesome-hermes-agent) · [SamurAIGPT](https://github.com/SamurAIGPT/awesome-hermes-agent)
+
+### Maintained here (small open-core set — optional)
+
+FrankX free packs are **not** the center of this list; they are one more option:
+
+| Pack | Repo |
+| --- | --- |
+| `coding-agents-superpack`, `todo-discipline` | [awesome-hermes-agent-skills/skills](https://github.com/frankxai/awesome-hermes-agent-skills/tree/main/skills) |
+
+---
+
+## UIs & workspaces
+
+| Project | Notes |
+| --- | --- |
+| [nesquena/hermes-webui](https://github.com/nesquena/hermes-webui) | Popular web + phone UI (~16k★) |
+| [EKKOLearnAI/hermes-studio](https://github.com/EKKOLearnAI/hermes-studio) | Full dashboard: chat, jobs, analytics, multi-profile (~9k★) |
+| [outsourc-e/hermes-workspace](https://github.com/outsourc-e/hermes-workspace) | Chat, terminal, memory, skills manager, inspector (~6k★) |
+| [fathah/hermes-desktop](https://github.com/fathah/hermes-desktop) | Desktop companion |
+| [dodo-reach/hermes-desktop](https://github.com/dodo-reach/hermes-desktop) | Mac-first pure SSH management — no extra gateway (~2k★) |
+| [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | Multi-CLI desktop including Hermes |
+| [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi) | Local 24/7 cowork across many CLIs |
+| [qingchencloud/clawpanel](https://github.com/qingchencloud/clawpanel) | Multi-engine panel (OpenClaw + Hermes) |
+| [pyrate-llama/hermes-ui](https://github.com/pyrate-llama/hermes-ui) | Single-file glassmorphic web UI |
+
+---
+
+## Memory & context
+
+| Project | Notes |
+| --- | --- |
+| [garrytan/gbrain](https://github.com/garrytan/gbrain) | Opinionated OpenClaw/Hermes brain layer (~26k★) |
+| [mnemosyne-oss/mnemosyne](https://github.com/mnemosyne-oss/mnemosyne) | Zero-dep sub-ms memory system for Hermes + others |
+| [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) | Local code knowledge graph for coding agents + Hermes |
+| [screenpipe/screenpipe](https://github.com/screenpipe/screenpipe) | Local continuous screen/audio context + MCP |
+| [yoloshii/ClawMem](https://github.com/yoloshii/ClawMem) | On-device memory layer |
+| [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) | Self-curating context harness |
+| [penfieldlabs/hermes-penfield](https://github.com/penfieldlabs/hermes-penfield) | Memory provider for Penfield knowledge graph |
+
+---
+
+## Tools & ops
+
+| Project | Notes |
+| --- | --- |
+| [builderz-labs/mission-control](https://github.com/builderz-labs/mission-control) | Self-hosted fleet control plane: dispatch, review, spend (~5.7k★) |
+| [jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser) | Stealth headless browser used with Hermes browser automation |
+| [mnfst/manifest](https://github.com/mnfst/manifest) | Connect harnesses to providers |
+| [liaohch3/claude-tap](https://github.com/liaohch3/claude-tap) | Intercept/inspect coding-agent + Hermes API traffic |
+| [fkiene/llmtrim](https://github.com/fkiene/llmtrim) | Local proxy that trims tool schemas/history before model calls |
+| [luoyuctl/agenttrace](https://github.com/luoyuctl/agenttrace) | Local TUI session audits (cost, retries, health) |
+| [Socialpranker/agentburn](https://github.com/Socialpranker/agentburn) | Read-only spend profiler for Hermes instances |
+| [0xrsydn/nix-hermes-agent](https://github.com/0xrsydn/nix-hermes-agent) | Nix package + NixOS module |
+| [42-evey/evey-setup](https://github.com/42-evey/evey-setup) | One-command stack setup with plugins |
+| [unitedideas/nothumansearch-mcp](https://github.com/unitedideas/nothumansearch-mcp) | MCP for discovering other MCP servers |
+
+---
+
+## Multi-agent & swarms
+
+| Project | Notes |
+| --- | --- |
+| Official [Kanban](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban) | Durable multi-profile board (built-in) |
+| [witt3rd/oh-my-hermes](https://github.com/witt3rd/oh-my-hermes) | Orchestration skill stack on Hermes primitives |
+| [builderz-labs/mission-control](https://github.com/builderz-labs/mission-control) | Fleet ops dashboard |
+| [jnMetaCode/agency-agents-zh](https://github.com/jnMetaCode/agency-agents-zh) | Large expert-role pack + orchestrator (Hermes among targets) |
+| [Ikalus1988/MisakaNet](https://github.com/Ikalus1988/MisakaNet) | Git-based distributed swarm memory |
+| [Abruptive/Ankh.md](https://github.com/Abruptive/Ankh.md) | Multi-agent swarm framework experiments |
+| [Rainhoole/hermes-agent-acp-skill](https://github.com/Rainhoole/hermes-agent-acp-skill) | Delegate across Hermes / Codex / Claude Code |
+
+---
+
+## Deploy & hosting
+
+| Project / guide | Notes |
+| --- | --- |
+| Official messaging deploy notes | [Telegram](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/telegram) (Fly/Railway/Render) · [WhatsApp Cloud](https://hermes-agent.nousresearch.com/docs/user-guide/messaging/whatsapp-cloud) (Cloudflare Tunnel) |
+| [Railway multi-agent guide](https://docs.railway.com/guides/multi-agent-system) | One service per agent pattern |
+| [xmbshwll/hermes-agent-docker](https://github.com/xmbshwll/hermes-agent-docker) | Minimal Docker sandbox |
+| [solomon2773/nora](https://github.com/solomon2773/nora) | Self-hosted control plane for Hermes/OpenClaw on Docker/K8s |
+| [JackTheGit/hermes-autonomous-server](https://github.com/JackTheGit/hermes-autonomous-server) | Headless systemd + cron server |
+
+In-repo deploy templates: [`templates/deploy/`](templates/deploy/) · [docs/deployment-matrix.md](docs/deployment-matrix.md)
+
+---
+
+## Domain applications
+
+| Project | Domain |
+| --- | --- |
+| [Lethe044/hermes-incident-commander](https://github.com/Lethe044/hermes-incident-commander) | SRE / self-healing incidents |
+| [Lethe044/hermes-life-os](https://github.com/Lethe044/hermes-life-os) | Personal OS / life patterns |
+| [Yonkoo11/hermes-dojo](https://github.com/Yonkoo11/hermes-dojo) | Skill self-improvement loop |
+| [Christabel337/job-scout-agent](https://github.com/Christabel337/job-scout-agent) | Job search pipeline |
+| [longsizhuo/openInvest](https://github.com/longsizhuo/openInvest) | Investment research (not financial advice) |
+| [bbolinger/snapmaker-u1-toolkit](https://github.com/bbolinger/snapmaker-u1-toolkit) | 3D printer safety-staged automation |
+| [setasoma/mycodo-hermes-skill](https://github.com/setasoma/mycodo-hermes-skill) | IoT mushroom cultivation |
+
+---
+
+## Learning & guides
 
 | Resource | Notes |
 | --- | --- |
-| [NousResearch/hermes-agent](https://github.com/NousResearch/hermes-agent) | Core runtime — profiles, skills, Kanban, gateway, backends |
-| [Official docs](https://hermes-agent.nousresearch.com/docs/) | Install, config, messaging, security, MCP, cron, skills |
-| [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profiles) | Isolated multi-instance agents on one host |
-| [Kanban](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban) | Durable multi-profile task board |
-| [Skills](https://hermes-agent.nousresearch.com/docs/user-guide/features/skills) | Procedural memory / `SKILL.md` |
-| [Desktop](https://hermes-agent.nousresearch.com/docs/user-guide/desktop) | Native desktop app |
-| [Web dashboard](https://hermes-agent.nousresearch.com/docs/user-guide/features/web-dashboard) | Local ops UI |
-| [Nous Portal](https://portal.nousresearch.com/) | Official provider + Tool Gateway path |
-| [autonovel](https://github.com/NousResearch/autonovel) | Long-form writing pipeline on Hermes |
-| [hermes-agent-self-evolution](https://github.com/NousResearch/hermes-agent-self-evolution) | DSPy + GEPA self-improvement research |
-| [hermes-paperclip-adapter](https://github.com/NousResearch/hermes-paperclip-adapter) | Hermes as managed worker in Paperclip |
-| [agentskills.io](https://agentskills.io) | Cross-agent skill standard |
-
-Source index (expanded): [docs/sources.md](docs/sources.md)
+| [Official quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart) | Start here |
+| [mudrii/hermes-agent-docs](https://github.com/mudrii/hermes-agent-docs) | Community docs supplement |
+| [LearnPrompt/LearnPrompt](https://github.com/LearnPrompt/LearnPrompt) | Free AIGC course covering Hermes among others |
+| YouTube: Profiles & Kanban masterclass | Search “Hermes Agent Masterclass Profiles Kanban” (community) |
 
 ---
 
-## ✦ Curated ecosystem
+## Operator playbooks (this repo)
 
-Stars are approximate snapshots (research pulse **2026-07-16**). Prefer **official docs + maturity** over star count alone.
-
-### UIs, workspaces, multi-agent surfaces
-
-| Project | Why it matters |
-| --- | --- |
-| [nesquena/hermes-webui](https://github.com/nesquena/hermes-webui) | Popular web/phone UI for Hermes |
-| [EKKOLearnAI/hermes-studio](https://github.com/EKKOLearnAI/hermes-studio) | Dashboard: chat, sessions, jobs, analytics |
-| [outsourc-e/hermes-workspace](https://github.com/outsourc-e/hermes-workspace) | Native workspace: chat, terminal, memory, skills, inspector |
-| [fathah/hermes-desktop](https://github.com/fathah/hermes-desktop) | Desktop companion |
-| [farion1231/cc-switch](https://github.com/farion1231/cc-switch) | Multi-CLI desktop (Claude Code, Codex, OpenCode, Hermes, …) |
-| [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi) | Local 24/7 cowork shell across many CLIs including Hermes |
-
-### Memory, knowledge, harness bridges
-
-| Project | Why it matters |
-| --- | --- |
-| [garrytan/gbrain](https://github.com/garrytan/gbrain) | Opinionated OpenClaw/Hermes “brain” patterns |
-| [colbymchenry/codegraph](https://github.com/colbymchenry/codegraph) | Local code knowledge graph for coding agents + Hermes |
-| [mnfst/manifest](https://github.com/mnfst/manifest) | Connect agents/harnesses to providers |
-| [screenpipe/screenpipe](https://github.com/screenpipe/screenpipe) | Local continuous context; Hermes/OpenClaw integrations |
-
-### Skills & related awesome lists
-
-| Project | Role |
-| --- | --- |
-| **[frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)** | **Our skills SSOT** + Skill Portfolio OS + free packs |
-| [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | Large independent directory |
-| [SamurAIGPT/awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) | Community skills/plugins index |
-| [agentskills.io](https://agentskills.io) | Portable skill standard |
-
-### Operator patterns in *this* repo
-
-| Path | Purpose |
-| --- | --- |
-| [docs/architecture.md](docs/architecture.md) | Layers: operator → control → profile → Kanban → memory → execution |
-| [docs/operator-decision-guide.md](docs/operator-decision-guide.md) | Local vs Railway vs Vercel vs enterprise |
-| [docs/deployment-matrix.md](docs/deployment-matrix.md) | Where Hermes should (and should not) live |
-| [docs/codex-control-plane.md](docs/codex-control-plane.md) | Git-desired-state for fleets |
-| [docs/managed-offerings.md](docs/managed-offerings.md) | Portal, adjacent products, bridges |
-| [examples/starlight-swarm-topology.md](examples/starlight-swarm-topology.md) | Conductor / coder / researcher / publisher / sentinel |
-| [docs/gencreator-swarm-dashboard.html](docs/gencreator-swarm-dashboard.html) | Interactive swarm dashboard (open in browser) |
-| `skills/arcanea-image-gen/` | Draft creative media skill (Arcanea router) — expand carefully |
-
----
-
-## ✦ Operator docs
+These are **our** opinionated founder/operator notes — optional, on top of the ecosystem list above.
 
 | Doc | Purpose |
 | --- | --- |
-| [Local Windows Setup](docs/local-windows-setup.md) | Working Windows CLI / dashboard / Electron notes |
-| [Operator Decision Guide](docs/operator-decision-guide.md) | Topology choices |
-| [Architecture Pattern](docs/architecture.md) | Profile-first armies + Starlight claims discipline |
-| [Deployment Matrix](docs/deployment-matrix.md) | Local / VPS / Railway / Vercel / Cloudflare / Docker |
-| [Codex Control Plane](docs/codex-control-plane.md) | Config generation & review loops |
-| [Provenance and Naming](docs/provenance-and-naming.md) | Attribution rules (hard) |
-| [Managed Offerings](docs/managed-offerings.md) | Portal, LiteLLM bridge, NemoClaw, etc. |
-| [Roadmap](docs/roadmap.md) | Next compiler / compose / provenance linter |
-| [Sources](docs/sources.md) | Checked primary links |
-
-### Validate local swarm emit
+| [GETTING_STARTED.md](GETTING_STARTED.md) | Hermes-first onboarding |
+| [docs/operator-decision-guide.md](docs/operator-decision-guide.md) | Local vs Railway vs Vercel vs enterprise |
+| [docs/architecture.md](docs/architecture.md) | Profile-first armies + claim discipline |
+| [docs/deployment-matrix.md](docs/deployment-matrix.md) | Where Hermes should live |
+| [docs/codex-control-plane.md](docs/codex-control-plane.md) | Git-desired-state fleets |
+| [docs/provenance-and-naming.md](docs/provenance-and-naming.md) | Hermes Agent ≠ Hermes models |
+| [docs/managed-offerings.md](docs/managed-offerings.md) | Portal, adjacent products |
+| [examples/starlight-swarm-topology.md](examples/starlight-swarm-topology.md) | Example roles |
+| [`configs/starlight-hermes-swarm.example.json`](configs/starlight-hermes-swarm.example.json) | Machine-readable example |
+| [`scripts/hermes-swarm.ps1`](scripts/hermes-swarm.ps1) | list / emit-local / doctor |
+| [docs/sources.md](docs/sources.md) | Source index |
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 list
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 emit-local
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 doctor
 ```
 
 ---
 
-## ✦ Deploy
-
-| Target | Use for | Avoid |
-| --- | --- | --- |
-| **Local** | Coding, files, MCP, dashboard on `127.0.0.1` | Public dashboards without auth |
-| **Railway / Fly / Render / VPS** | Always-on workers, messaging gateways | Cramming full fleets into one opaque process |
-| **Vercel** | Control panels, docs, enqueue APIs | Long-running shell agents in serverless handlers |
-| **Cloudflare Tunnel + Access** | Secure edge to local/stateful workers | Assuming Workers = full Hermes home |
-| **Docker** | Repeatable profile isolation + volumes | Ephemeral containers without `HERMES_HOME` volume |
-
-Templates: [`templates/deploy/`](templates/deploy/)
-
----
-
-## ✦ Companion repos (FrankX)
-
-| Repo | Purpose |
-| --- | --- |
-| **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)** | Skills packs + Skill Portfolio OS |
-| [awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems) | Broader agent OS / MCP / harness index |
-| [agentic-architecture-field-guide](https://github.com/frankxai/agentic-architecture-field-guide) | Vendor-neutral architecture choices |
-| [hermes-cockpit](https://github.com/frankxai/hermes-cockpit) | Profile registry / cockpit experiments |
-| [agentic-ops-hub](https://github.com/frankxai/agentic-ops-hub) | Open-core multi-machine / bus doctrine |
-| [agentic-creator-os](https://github.com/frankxai/agentic-creator-os) | Creator OS open core |
-
-### Full FrankX awesome suite
+## Related awesome lists
 
 | List | Focus |
 | --- | --- |
-| [awesome-hermes-agents](https://github.com/frankxai/awesome-hermes-agents) | **This repo** — Hermes agents & ops |
-| [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) | Hermes skills & portfolio OS |
-| [awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems) | Agent OS landscape |
-| [awesome-agentic-income](https://github.com/frankxai/awesome-agentic-income) | Agentic income systems |
-| [awesome-ai-coe](https://github.com/frankxai/awesome-ai-coe) | AI Center of Excellence |
-| [awesome-automation-agent-skills](https://github.com/frankxai/awesome-automation-agent-skills) | Loops, cron, kanban, fleet ops |
-| [awesome-design-agent-skills](https://github.com/frankxai/awesome-design-agent-skills) | Design agents |
-| [awesome-music-agent-skills](https://github.com/frankxai/awesome-music-agent-skills) | Music agents |
-| [awesome-motion-design-agent-skills](https://github.com/frankxai/awesome-motion-design-agent-skills) | Motion design |
-| [awesome-wealth-agent-skills](https://github.com/frankxai/awesome-wealth-agent-skills) | Wealth agents |
-| [awesome-investor-agent-skills](https://github.com/frankxai/awesome-investor-agent-skills) | Investor agents |
-| [awesome-gamification-agent-skills](https://github.com/frankxai/awesome-gamification-agent-skills) | Gamification |
-| [awesome-cosmos-ai-agents](https://github.com/frankxai/awesome-cosmos-ai-agents) | Cosmos / space agents |
-| [awesome-manifestation-skills](https://github.com/frankxai/awesome-manifestation-skills) | Manifestation skills |
-| [awesome-mind-agent-skills](https://github.com/frankxai/awesome-mind-agent-skills) | Mind / cognition skills |
+| [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) | Broad ecosystem directory |
+| [SamurAIGPT/awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) | Skills/plugins with maturity tags |
+| [frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) | Skills-focused companion (web + free packs) |
+| [frankxai/awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems) | Broader agent OS landscape |
+| [SamurAIGPT/awesome-openclaw](https://github.com/SamurAIGPT/awesome-openclaw) | OpenClaw (migration path to Hermes) |
+
+### FrankX domain lists (optional)
+
+[agentic-income](https://github.com/frankxai/awesome-agentic-income) · [automation skills](https://github.com/frankxai/awesome-automation-agent-skills) · [design skills](https://github.com/frankxai/awesome-design-agent-skills) · [music skills](https://github.com/frankxai/awesome-music-agent-skills) · [ai-coe](https://github.com/frankxai/awesome-ai-coe)
 
 ---
 
-## ✦ Recommended architecture (Starlight)
+## Contributing
 
-```mermaid
-flowchart TB
-  OP[Operator / Founder] --> CP[Control plane: Git + Codex/Claude]
-  CP --> SPEC[Swarm specs / profile YAML]
-  SPEC --> HA[Hermes profiles]
-  HA --> KB[Hermes Kanban]
-  HA --> SK[Skills packs]
-  SK --> SKREPO[awesome-hermes-agent-skills]
-  HA --> MEM[Profile memory + SIS provenance]
-  HA --> EX[Execution: local / Docker / SSH / cloud backends]
-  EX --> PR[Providers: Nous Portal / OpenRouter / Anthropic / local]
-  OP --> GW[Messaging gateway Telegram etc.]
-  GW --> HA
-```
-
-**Hard rules**
-
-1. Desired state in Git; runtime state (`HERMES_HOME`, sessions, memories, tokens) **never** in public git.  
-2. One durable profile per role — not anonymous clones.  
-3. Skills are portable procedures → publish/sanitize via the **skills** repo.  
-4. Claims must not confuse Hermes Agent ↔ Hermes models ↔ Portal ↔ third-party “managed Hermes”.
+1. Prefer **external, high-quality** links with a one-line *why*.  
+2. Skills → prefer PR to [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) if the entry is skill-pack only; agents/UIs/tools/ops can land here.  
+3. No hallucinated tools. No secret dumps. See [CONTRIBUTING.md](CONTRIBUTING.md) · [SECURITY.md](SECURITY.md).
 
 ---
 
-## ✦ Repo structure
+## License
 
-```text
-awesome-hermes-agents/
-├── assets/                 # hero.svg / hero.png
-├── configs/                # starlight-hermes-swarm.example.json
-├── docs/                   # operator guides + swarm dashboard HTML
-├── examples/               # topology narratives
-├── scripts/                # hermes-swarm.ps1
-├── skills/                 # sparse draft skills (prefer skills repo for packs)
-├── templates/
-│   ├── agents/             # profile spec shape
-│   └── deploy/             # Railway / Vercel / Cloudflare examples
-├── GETTING_STARTED.md
-├── CONTRIBUTING.md
-└── SECURITY.md
-```
-
-Documentation-first, with just enough executable surface to **list / emit / doctor** a swarm topology.
-
----
-
-## ✦ Contributing
-
-- Hermes-**agent / ops** patterns → PRs here.  
-- Hermes-**skills** / `SKILL.md` packs → [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills).  
-- Broader agent OS links → [awesome-agent-operating-systems](https://github.com/frankxai/awesome-agent-operating-systems).  
-- See [CONTRIBUTING.md](CONTRIBUTING.md) · [SECURITY.md](SECURITY.md) · [provenance](docs/provenance-and-naming.md).
-
-**Quality bar:** no hallucinated tools; high-signal only; explain *why* an entry belongs; link primary sources.
-
----
-
-## ✦ License
-
-[MIT](LICENSE) — FrankX / Starlight Intelligence
+[MIT](LICENSE)
 
 ---
 
 <p align="center">
-  Built by <a href="https://github.com/frankxai">frankxai</a>
-  · Powered by <a href="https://github.com/NousResearch/hermes-agent">Nous Research Hermes Agent</a>
+  Curated by <a href="https://github.com/frankxai">frankxai</a>
+  · Runtime by <a href="https://github.com/NousResearch/hermes-agent">Nous Research</a>
   · Skills companion: <a href="https://github.com/frankxai/awesome-hermes-agent-skills">awesome-hermes-agent-skills</a>
-  · Last research pulse: <strong>2026-07-16</strong>
+  · Pulse: <strong>2026-07-16</strong>
 </p>
