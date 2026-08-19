@@ -27,6 +27,8 @@ skills:
   - software-development/github-code-review
   - devops/watchers
 
+# %LOCALAPPDATA% is Windows-specific; use a platform path such as
+# ~/.hermes/profiles/coder on Linux or macOS.
 memory:
   hermes_profile_home: "%LOCALAPPDATA%/hermes/profiles/coder"
   starlight_vault_scope:
@@ -48,4 +50,3 @@ deployment:
     enabled: false
   dashboard_registry:
     expose: true
-

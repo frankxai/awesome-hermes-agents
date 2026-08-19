@@ -1,0 +1,68 @@
+# Example publisher profile spec for Codex/Starlight generators.
+# This is not an official Hermes config schema.
+
+id: publisher
+display_name: Hermes Publisher
+owner: frankxai
+runtime: hermes-agent
+profile_command: publisher
+
+purpose: >
+  Package approved research, release notes, and launch updates for docs,
+  websites, and social channels.
+
+model:
+  provider: nous
+  fallback_provider: openrouter
+  preferred_model: anthropic/claude-sonnet-4.5
+
+toolsets:
+  - terminal
+  - file
+  - web
+  - memory
+  - skills
+
+skills:
+  - documentation/docs
+  - documentation/website
+  - documentation/release-notes
+  - marketing/social-packaging
+  - plugins/hermes-tweet
+
+integrations:
+  hermes_tweet:
+    package: hermes-tweet
+    repo: https://github.com/Xquik-dev/hermes-tweet
+    required_env:
+      - XQUIK_API_KEY
+    action_env: HERMES_TWEET_ENABLE_ACTIONS
+    actions_enabled_by_default: false
+    use_case: >
+      Draft and publish approved X/Twitter updates from a dedicated publisher
+      profile after operator review.
+
+# %LOCALAPPDATA% is Windows-specific; use a platform path such as
+# ~/.hermes/profiles/publisher on Linux or macOS.
+memory:
+  hermes_profile_home: "%LOCALAPPDATA%/hermes/profiles/publisher"
+  starlight_vault_scope:
+    - communications
+    - provenance
+
+governance:
+  can_write_files: true
+  can_push_git: false
+  can_publish_social: true
+  needs_human_approval:
+    - production_deploy
+    - public_social_post
+    - destructive_filesystem_change
+
+deployment:
+  local:
+    enabled: true
+  railway:
+    enabled: false
+  dashboard_registry:
+    expose: true

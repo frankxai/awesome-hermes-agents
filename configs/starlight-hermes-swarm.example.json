@@ -50,8 +50,8 @@
       "displayName": "Hermes Publisher",
       "purpose": "Turn verified research and architecture into docs, guides, and launch assets.",
       "deploy": ["local", "vercel-control-plane"],
-      "skills": ["docs", "website", "release-notes"],
-      "secrets": ["NOUS_API_KEY", "VERCEL_TOKEN"]
+      "skills": ["docs", "website", "release-notes", "social-packaging", "hermes-tweet"],
+      "secrets": ["NOUS_API_KEY", "VERCEL_TOKEN", "XQUIK_API_KEY"]
     }
   ]
 }
