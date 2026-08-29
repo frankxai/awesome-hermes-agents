@@ -160,6 +160,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [fkiene/llmtrim](https://github.com/fkiene/llmtrim) | Local proxy that trims tool schemas/history before model calls |
 | [luoyuctl/agenttrace](https://github.com/luoyuctl/agenttrace) | Local TUI session audits (cost, retries, health) |
 | [Socialpranker/agentburn](https://github.com/Socialpranker/agentburn) | Read-only spend profiler for Hermes instances |
+| [masterlf/hermes-ai-usage](https://github.com/masterlf/hermes-ai-usage) | Read-only provider quota and per-profile token telemetry for Hermes Desktop and Web Dashboard; keeps provider quota distinct from local usage and does not read prompt content. |
 | [0xrsydn/nix-hermes-agent](https://github.com/0xrsydn/nix-hermes-agent) | Nix package + NixOS module |
 | [42-evey/evey-setup](https://github.com/42-evey/evey-setup) | One-command stack setup with plugins |
 | [unitedideas/nothumansearch-mcp](https://github.com/unitedideas/nothumansearch-mcp) | MCP for discovering other MCP servers |
