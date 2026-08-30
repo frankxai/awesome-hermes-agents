@@ -45,7 +45,9 @@ Other excellent independent directories (use them too):
 - [0xNyk/awesome-hermes-agent](https://github.com/0xNyk/awesome-hermes-agent) (~4.7k★) — large skills/plugins/tools directory  
 - [SamurAIGPT/awesome-hermes-agent](https://github.com/SamurAIGPT/awesome-hermes-agent) (~1.8k★) — skills, plugins, maturity tags  
 
-Research pulse: **2026-07-16**. Stars are approximate; prefer maintenance + docs over vanity stars.
+Research pulse: **2026-08-30**. Stars are approximate; prefer maintenance + docs over vanity stars.
+
+Skills for agents live in **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)** — including the [earned-skill doctrine](https://github.com/frankxai/awesome-hermes-agent-skills/blob/main/docs/EARNED-SKILLS.md) (about 5–7 named workflows, not 500) and the [quality & safety gate](https://github.com/frankxai/awesome-hermes-agent-skills/blob/main/docs/QUALITY-AND-SAFETY.md) (read source, license, NVIDIA SkillSpector, no unsigned ZIPs, no wallet skills without a human spend gate).
 
 ---
 
@@ -88,7 +90,18 @@ Key docs: [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profi
 
 > Full web-wide skills table lives in **[awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)**. Highlights below so this agents list stays useful standalone.
 
-### Start with these (ecosystem, not ours)
+### Earned operator stack (install these, not everything)
+
+| Project | Why |
+| --- | --- |
+| [agentskills.io](https://agentskills.io) / [agentskills/agentskills](https://github.com/agentskills/agentskills) | Portable `SKILL.md` spec |
+| [anthropics/skills](https://github.com/anthropics/skills) | Official named examples — not a bulk dump |
+| [obra/superpowers](https://github.com/obra/superpowers) | TDD / debug / review methodology (~280k★, 2026-08-30) |
+| [garrytan/gstack](https://github.com/garrytan/gstack) | Product + design + QA loops (~130k★) |
+| [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) | Scan a skill before it runs |
+| [addyosmani/agent-skills](https://github.com/addyosmani/agent-skills) | Production engineering skills |
+
+### Start with these (Hermes-native ecosystem)
 
 | Project | Why |
 | --- | --- |
@@ -206,6 +219,18 @@ In-repo deploy templates: [`templates/deploy/`](templates/deploy/) · [docs/depl
 | [longsizhuo/openInvest](https://github.com/longsizhuo/openInvest) | Investment research (not financial advice) |
 | [bbolinger/snapmaker-u1-toolkit](https://github.com/bbolinger/snapmaker-u1-toolkit) | 3D printer safety-staged automation |
 | [setasoma/mycodo-hermes-skill](https://github.com/setasoma/mycodo-hermes-skill) | IoT mushroom cultivation |
+
+Structured **skill** indexes by domain (web-first, quality-gated):
+
+| Domain | List |
+| --- | --- |
+| Skills hub | [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) |
+| Design | [awesome-design-agent-skills](https://github.com/frankxai/awesome-design-agent-skills) |
+| Motion / video | [awesome-motion-design-agent-skills](https://github.com/frankxai/awesome-motion-design-agent-skills) |
+| Music | [awesome-music-agent-skills](https://github.com/frankxai/awesome-music-agent-skills) |
+| Payments | [awesome-payment-agent-skills](https://github.com/frankxai/awesome-payment-agent-skills) |
+| Automation | [awesome-automation-agent-skills](https://github.com/frankxai/awesome-automation-agent-skills) |
+| Game (upstream) | [gamedev-skills/awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) |
 
 ---
 
