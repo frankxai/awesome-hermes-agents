@@ -166,6 +166,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 
 | Project | Notes |
 | --- | --- |
+| [eloktev/artifact-relay](https://github.com/eloktev/artifact-relay) | Private-by-default Markdown/HTML delivery for Hermes, with separate publisher and viewer credentials, a self-hosted Docker service, and an installable plugin. `Production` |
 | [builderz-labs/mission-control](https://github.com/builderz-labs/mission-control) | Self-hosted fleet control plane: dispatch, review, spend (~5.7k★) |
 | [jo-inc/camofox-browser](https://github.com/jo-inc/camofox-browser) | Stealth headless browser used with Hermes browser automation |
 | [mnfst/manifest](https://github.com/mnfst/manifest) | Connect harnesses to providers |
