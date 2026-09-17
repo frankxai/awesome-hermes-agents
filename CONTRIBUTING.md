@@ -1,38 +1,20 @@
 # Contributing Standards
 
-We welcome contributions that align with **verifiable, high-signal Hermes Agent operator intelligence**.
-
-## Scope of this repository
-
-This is a classic **awesome list of the Hermes Agent ecosystem** (web-wide):
-
-- UIs, tools, memory layers, multi-agent systems, deploy packs
-- high-signal links with a one-line *why*
-- optional operator docs under `docs/` (our playbooks, clearly labeled)
-
-**Skill-pack-heavy entries** should prefer:
-
-→ [frankxai/awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)
-
-Do **not** treat PRs as a funnel into FrankX products. Prefer other people's excellent work.
+We welcome contributions that align with our core thesis of **verifiable, world-healing, and rigorously-tested agent intelligence**.
 
 ## The Golden Rules
 
-1. **Web first** — the list must stay useful if every FrankX link were removed.
-2. **No hallucinated tooling** — entries must point at real, checkable sources.
-3. **Safety first** — shell, capital, or production access needs human gates called out.
-4. **High signal, low noise** — explain *why* the resource is best-in-class for its layer.
-5. **Provenance** — do not claim official Nous ownership. Follow [docs/provenance-and-naming.md](docs/provenance-and-naming.md).
-6. **Formatting** — match README tables; keep mobile-scannable.
+1. **No Hallucinated Tooling**: If you submit an agent skill, prompt, or tool, it must be verified to work against a real API or framework.
+2. **Safety First**: Any capability that interfaces with the physical world, live capital, or critical infrastructure must include strict human-in-the-loop approval gates.
+3. **High Signal, Low Noise**: We prefer deeply curated, opinionated lists over exhaustive link dumps. If you add a repository, explain *why* it is the best-in-class choice for that specific layer of the agent OS.
+4. **Formatting**: Ensure your Markdown is clean. If adding to a list, use the existing `<details>` structure to preserve the scannability of the README.
 
 ## How to Submit
 
 1. Fork the repository.
-2. Create a feature branch (`git checkout -b feature/add-operator-pattern`).
-3. Prefer adding links + short rationale over large unsolicited rewrites of the whole README.
-4. Open a Pull Request with primary source URLs and maturity notes (production / beta / experimental).
+2. Create a feature branch (`git checkout -b feature/amazing-new-skill`).
+3. Commit your changes (`git commit -m 'feat: Add incredible new skill'`).
+4. Push to the branch (`git push origin feature/amazing-new-skill`).
+5. Open a Pull Request.
 
-## Related lists
-
-- Skills: https://github.com/frankxai/awesome-hermes-agent-skills
-- Agent OS landscape: https://github.com/frankxai/awesome-agent-operating-systems
+Your PR will be reviewed against our strict quality gates. We expect a high standard of engineering and documentation. Thank you for helping build the intelligence layer.

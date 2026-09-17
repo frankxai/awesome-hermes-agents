@@ -1,55 +1,23 @@
-# Getting Started — Hermes Agents
+# Getting Started with Agentic Swarms
 
-This repo is a **web-first awesome list** of Hermes Agent resources, plus optional operator playbooks under `docs/`.
+Welcome to the future of software development and automation. This repository provides a curated collection of agentic tools, MCP servers, and Claude Code skills designed to give you superpowers.
 
-## 1. Official install (always first)
+## What is Claude Code?
+Claude Code is an agentic CLI tool that allows Anthropic's Claude models to interact directly with your local file system, run terminal commands, and execute complex workflows autonomously.
 
-1. [Installation](https://hermes-agent.nousresearch.com/docs/getting-started/installation)
-2. [Quickstart](https://hermes-agent.nousresearch.com/docs/getting-started/quickstart)
-3. [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profiles)
-4. [Kanban tutorial](https://hermes-agent.nousresearch.com/docs/user-guide/features/kanban-tutorial)
+## What is an MCP Server?
+The **Model Context Protocol (MCP)** is an open standard that enables AI models to connect securely to local or remote data sources and tools. Think of MCP servers as "plugins" that give Claude the ability to read your database, interact with GitHub, or manage your calendar.
 
-```bash
-hermes version
-hermes doctor
-```
+## How to Get Started (Free Tier)
+1. **Install Claude Code:** Follow the official instructions from Anthropic to install the CLI.
+2. **Explore Our Curated Directories:** Browse the `README.md` to discover top-tier open-source tools and frameworks in this niche.
+3. **Try the Lite Skills:** We include basic starter skills in this repository. Place them in your `.agents/skills/` directory and let Claude automate your basic tasks.
 
-Windows desktop notes: [docs/local-windows-setup.md](docs/local-windows-setup.md)
+## Unlock Premium Capabilities
+While we provide immense value here for free, the true magic happens when you orchestrate multiple agents together into a **Swarm**.
 
-## 2. Browse the ecosystem (README)
+If you're ready to deploy production-grade agentic pipelines (like the **Visual Creation Loop**, the **Product Engine**, or full **CACOS** operating system), check out our premium offerings at [frankx.ai/products](https://frankx.ai/products).
 
-Open [README.md](./README.md) for curated links **from across the web**:
+> "The open-source community provides the raw materials. Our premium products provide the blueprints and automated factories to assemble them at scale."
 
-- UIs (WebUI, Studio, Workspace, …)
-- Skills (wondelai, skill-factory, oh-my-hermes, …)
-- Memory (gbrain, mnemosyne, codegraph, …)
-- Multi-agent / deploy tools
-
-Skills deep-dive: [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills)  
-Also: [0xNyk](https://github.com/0xNyk/awesome-hermes-agent) · [SamurAIGPT](https://github.com/SamurAIGPT/awesome-hermes-agent)
-
-## 3. First multi-agent setup
-
-```bash
-hermes profile create researcher
-hermes profile create coder
-hermes kanban
-```
-
-## 4. Optional operator docs in this repo
-
-| Doc | When |
-| --- | --- |
-| [docs/operator-decision-guide.md](docs/operator-decision-guide.md) | Topology choices |
-| [docs/deployment-matrix.md](docs/deployment-matrix.md) | Local / Railway / Vercel / CF |
-| [docs/architecture.md](docs/architecture.md) | Profile-first pattern |
-| `scripts/hermes-swarm.ps1` | Emit/validate example swarm |
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\hermes-swarm.ps1 doctor
-```
-
-## 5. Install skills from the *web* first
-
-Prefer ecosystem packs (wondelai, skill-factory, etc.) from the README.  
-Our free packs are optional extras under [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills).
+Happy building!
