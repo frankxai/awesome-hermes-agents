@@ -159,6 +159,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [yoloshii/ClawMem](https://github.com/yoloshii/ClawMem) | On-device memory layer |
 | [greyhaven-ai/autocontext](https://github.com/greyhaven-ai/autocontext) | Self-curating context harness |
 | [penfieldlabs/hermes-penfield](https://github.com/penfieldlabs/hermes-penfield) | Memory provider for Penfield knowledge graph |
+| [louis030195/hyperconsciousness](https://github.com/louis030195/hyperconsciousness) | Experimental Rust knowledge store with encrypted, append-only records; Hermes instruction skill and MCP retrieval through scoped, expiring grants |
 
 ---
 
