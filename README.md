@@ -145,6 +145,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [iOfficeAI/AionUi](https://github.com/iOfficeAI/AionUi) | Local 24/7 cowork across many CLIs |
 | [qingchencloud/clawpanel](https://github.com/qingchencloud/clawpanel) | Multi-engine panel (OpenClaw + Hermes) |
 | [pyrate-llama/hermes-ui](https://github.com/pyrate-llama/hermes-ui) | Single-file glassmorphic web UI |
+| [bielcarpi/hermes-live-voice](https://github.com/bielcarpi/hermes-live-voice) | Realtime voice gateway + Dashboard plugin over `/v1/runs`: local speech, Gemini Live or OpenAI Realtime · MIT · beta |
 
 ---
 
