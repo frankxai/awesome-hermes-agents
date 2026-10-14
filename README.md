@@ -181,6 +181,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [0xrsydn/nix-hermes-agent](https://github.com/0xrsydn/nix-hermes-agent) | Nix package + NixOS module |
 | [42-evey/evey-setup](https://github.com/42-evey/evey-setup) | One-command stack setup with plugins |
 | [unitedideas/nothumansearch-mcp](https://github.com/unitedideas/nothumansearch-mcp) | MCP for discovering other MCP servers |
+| [Aident Loadout](https://aident.ai) | Capability layer / remote MCP (`https://loadout.aident.ai/mcp`) connecting Hermes and other agents to 1,000+ apps and 400+ Skills through one setup; Vault + Audit. Skill: [Aident-AI/aident-skill](https://github.com/Aident-AI/aident-skill). `Production` |
 
 ---
 
