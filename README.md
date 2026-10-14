@@ -223,6 +223,7 @@ In-repo deploy templates: [`templates/deploy/`](templates/deploy/) · [docs/depl
 | [longsizhuo/openInvest](https://github.com/longsizhuo/openInvest) | Investment research (not financial advice) |
 | [bbolinger/snapmaker-u1-toolkit](https://github.com/bbolinger/snapmaker-u1-toolkit) | 3D printer safety-staged automation |
 | [setasoma/mycodo-hermes-skill](https://github.com/setasoma/mycodo-hermes-skill) | IoT mushroom cultivation |
+| [nowork-studio/notfair-plugin](https://github.com/nowork-studio/notfair-plugin) | Marketing / SEO / GEO / paid ads |
 
 Structured **skill** indexes by domain (web-first, quality-gated):
 
