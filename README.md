@@ -119,6 +119,7 @@ Key docs: [Profiles](https://hermes-agent.nousresearch.com/docs/user-guide/profi
 | [CorpusIQ/corpusiq-docs](https://github.com/CorpusIQ/corpusiq-docs) | Business ops skill library + many MCP connectors |
 | [longbridge/skills](https://github.com/longbridge/skills) | Markets / portfolio skills (HK/US/A-share/SG) |
 | [ZeroPointRepo/youtube-skills](https://github.com/ZeroPointRepo/youtube-skills) | YouTube search + robust transcripts |
+| [dachaimahogany/hermes-agent-hint](https://github.com/dachaimahogany/hermes-agent-hint) | Inference-side awareness: `X-Agent-Hint` header (session id, state, priority, cache pin) so an engine can pin a session to its KV-cache instance · stdlib-only · beta |
 
 **Browse more:** [awesome-hermes-agent-skills](https://github.com/frankxai/awesome-hermes-agent-skills) · [0xNyk](https://github.com/0xNyk/awesome-hermes-agent) · [SamurAIGPT](https://github.com/SamurAIGPT/awesome-hermes-agent)
 
