@@ -184,6 +184,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [42-evey/evey-setup](https://github.com/42-evey/evey-setup) | One-command stack setup with plugins |
 | [unitedideas/nothumansearch-mcp](https://github.com/unitedideas/nothumansearch-mcp) | MCP for discovering other MCP servers |
 | [Aident Loadout](https://aident.ai) | Capability layer / remote MCP (`https://loadout.aident.ai/mcp`) connecting Hermes and other agents to 1,000+ apps and 400+ Skills through one setup; Vault + Audit. Skill: [Aident-AI/aident-skill](https://github.com/Aident-AI/aident-skill). `Production` |
+| [voygr-tech/placecall](https://github.com/voygr-tech/placecall) | Remote MCP (`https://api.voygr.tech/mcp/`) that lets Hermes place real phone calls to US businesses (bookings, appointments, quotes, opening hours) and get back the outcome and transcript. Connect with `hermes mcp add placecall --url https://api.voygr.tech/mcp/ --auth header`. Each call rings a real phone and is billed per outcome, so keep `place_call` behind operator approval. `Production` |
 
 ---
 
