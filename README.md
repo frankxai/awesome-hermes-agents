@@ -184,6 +184,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [42-evey/evey-setup](https://github.com/42-evey/evey-setup) | One-command stack setup with plugins |
 | [unitedideas/nothumansearch-mcp](https://github.com/unitedideas/nothumansearch-mcp) | MCP for discovering other MCP servers |
 | [Aident Loadout](https://aident.ai) | Capability layer / remote MCP (`https://loadout.aident.ai/mcp`) connecting Hermes and other agents to 1,000+ apps and 400+ Skills through one setup; Vault + Audit. Skill: [Aident-AI/aident-skill](https://github.com/Aident-AI/aident-skill). `Production` |
+| [deed.page](https://deed.page) | Publish an HTML report or static folder from Hermes to a permanent public `https://<slug>.deed.page/` URL, via the hosted remote MCP (`https://deed.page/mcp`, no auth) or one `curl` PUT. Skill: [f-o-x11/deed-page-skill](https://github.com/f-o-x11/deed-page-skill) (`hermes skills install f-o-x11/deed-page-skill/skills/deed-page`). Free sites are public, so no secrets; the owner token can update or delete them. `Beta` |
 
 ---
 
