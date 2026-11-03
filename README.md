@@ -210,7 +210,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [xmbshwll/hermes-agent-docker](https://github.com/xmbshwll/hermes-agent-docker) | Minimal Docker sandbox |
 | [solomon2773/nora](https://github.com/solomon2773/nora) | Self-hosted control plane for Hermes/OpenClaw on Docker/K8s |
 | [JackTheGit/hermes-autonomous-server](https://github.com/JackTheGit/hermes-autonomous-server) | Headless systemd + cron server |
-| [ReadyHermes](https://readyhermes.com/) | Hosted Hermes Agent: a dedicated agent per account, no server, Docker or API keys; Telegram, WhatsApp, Discord, WeChat or browser chat; 30-min free trial, then from $3.99/mo |
+| [ReadyHermes](https://readyhermes.com/) | Hosted Hermes Agent: a dedicated agent per account, no server, Docker or API keys; Telegram, WhatsApp, Discord, WeChat or browser chat; 1-hour free trial, then from $3.99/mo |
 
 In-repo deploy templates: [`templates/deploy/`](templates/deploy/) · [docs/deployment-matrix.md](docs/deployment-matrix.md)
 
