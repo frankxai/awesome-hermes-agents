@@ -147,6 +147,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [qingchencloud/clawpanel](https://github.com/qingchencloud/clawpanel) | Multi-engine panel (OpenClaw + Hermes) |
 | [pyrate-llama/hermes-ui](https://github.com/pyrate-llama/hermes-ui) | Single-file glassmorphic web UI |
 | [bielcarpi/hermes-live-voice](https://github.com/bielcarpi/hermes-live-voice) | Realtime voice gateway + Dashboard plugin over `/v1/runs`: local speech, Gemini Live or OpenAI Realtime · MIT · beta |
+| [ateymoori/pomelu](https://github.com/ateymoori/pomelu) | Open-source phone/foldable/tablet app (Android, Apache-2.0, beta): chat with your self-hosted Hermes Agent, voice, files, approvals · APK on GitHub Releases |
 
 ---
 
@@ -179,12 +180,14 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [Socialpranker/agentburn](https://github.com/Socialpranker/agentburn) | Read-only spend profiler for Hermes instances |
 | [masterlf/hermes-ai-usage](https://github.com/masterlf/hermes-ai-usage) | Read-only provider quota and per-profile token telemetry for Hermes Desktop and Web Dashboard; keeps provider quota distinct from local usage and does not read prompt content. |
 | [bablobanov/hermes-agent-telegram-dashboard](https://github.com/bablobanov/hermes-agent-telegram-dashboard) | Gateway plugin: read-only status screen in one pinned Telegram message (gateway health, account limits, backup freshness, config drift); no LLM calls |
+| [radres/hermes-plugin-call-me](https://github.com/radres/hermes-plugin-call-me) | Gateway plugin: text your Hermes agent from the /call-me phone app (iPhone and Android, paid) and let it ring you, speak a question and return your spoken answer as text; only the numbers you list can reach the agent. `Beta` |
 | [bablobanov/hermes-agent-alice-voice](https://github.com/bablobanov/hermes-agent-alice-voice) | `Experimental` — private Yandex Alice voice input for Russian-speaking operators; stock gateway, replies in Telegram only. Requires secured HTTPS and a bearer secret; no Yandex request-signature verification |
 | [0xrsydn/nix-hermes-agent](https://github.com/0xrsydn/nix-hermes-agent) | Nix package + NixOS module |
 | [42-evey/evey-setup](https://github.com/42-evey/evey-setup) | One-command stack setup with plugins |
 | [unitedideas/nothumansearch-mcp](https://github.com/unitedideas/nothumansearch-mcp) | MCP for discovering other MCP servers |
 | [Aident Loadout](https://aident.ai) | Capability layer / remote MCP (`https://loadout.aident.ai/mcp`) connecting Hermes and other agents to 1,000+ apps and 400+ Skills through one setup; Vault + Audit. Skill: [Aident-AI/aident-skill](https://github.com/Aident-AI/aident-skill). `Production` |
-| [voygr-tech/placecall](https://github.com/voygr-tech/placecall) | Remote MCP (`https://api.voygr.tech/mcp/`) that lets Hermes place real phone calls to US businesses (bookings, appointments, quotes, opening hours) and get back the outcome and transcript. Connect with `hermes mcp add placecall --url https://api.voygr.tech/mcp/ --auth header`. Each call rings a real phone and is billed per outcome, so keep `place_call` behind operator approval. `Production` |
+| [deed.page](https://deed.page) | Publish an HTML report or static folder from Hermes to a permanent public `https://<slug>.deed.page/` URL, via the hosted remote MCP (`https://deed.page/mcp`, no auth) or one `curl` PUT. Skill: [f-o-x11/deed-page-skill](https://github.com/f-o-x11/deed-page-skill) (`hermes skills install f-o-x11/deed-page-skill/skills/deed-page`). Free sites are public, so no secrets; the owner token can update or delete them. `Beta` |
+| [voygr-tech/placecall](https://github.com/voygr-tech/placecall) | Remote MCP (`https://api.voygr.tech/mcp/`) that lets Hermes place real phone calls to US businesses (bookings, appointments, quotes, opening hours) and get back the outcome and transcript. Connect with `hermes mcp add placecall --url https://api.voygr.tech/mcp/ --auth header`. Each call rings a real phone and is billed per outcome, so keep `place_call` behind operator approval. `Hosted service` |
 
 ---
 
@@ -211,6 +214,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [xmbshwll/hermes-agent-docker](https://github.com/xmbshwll/hermes-agent-docker) | Minimal Docker sandbox |
 | [solomon2773/nora](https://github.com/solomon2773/nora) | Self-hosted control plane for Hermes/OpenClaw on Docker/K8s |
 | [JackTheGit/hermes-autonomous-server](https://github.com/JackTheGit/hermes-autonomous-server) | Headless systemd + cron server |
+| [ReadyHermes](https://readyhermes.com/) | Hosted Hermes Agent: a dedicated agent per account, no server, Docker or API keys; Telegram, WhatsApp, Discord, WeChat or browser chat; 1-hour free trial, then from $3.99/mo |
 
 In-repo deploy templates: [`templates/deploy/`](templates/deploy/) · [docs/deployment-matrix.md](docs/deployment-matrix.md)
 
