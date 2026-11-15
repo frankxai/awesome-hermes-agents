@@ -148,6 +148,7 @@ FrankX free packs are **not** the center of this list; they are one more option:
 | [pyrate-llama/hermes-ui](https://github.com/pyrate-llama/hermes-ui) | Single-file glassmorphic web UI |
 | [bielcarpi/hermes-live-voice](https://github.com/bielcarpi/hermes-live-voice) | Realtime voice gateway + Dashboard plugin over `/v1/runs`: local speech, Gemini Live or OpenAI Realtime · MIT · beta |
 | [ateymoori/pomelu](https://github.com/ateymoori/pomelu) | Open-source phone/foldable/tablet app (Android, Apache-2.0, beta): chat with your self-hosted Hermes Agent, voice, files, approvals · APK on GitHub Releases |
+| [nodelike/sikemux](https://github.com/nodelike/sikemux) | Native Mac/Linux app running Hermes over ACP as one team with Claude Code and Codex, phone apps · MIT |
 
 ---
 
